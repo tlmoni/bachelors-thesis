@@ -1,2 +1,11 @@
+.vscode
 instructions
 opinnayteohjeet
+
+# Temp files
+*.aux
+*.log
+*.out
+*.toc
+*.xmpdata
+*.xmpi
