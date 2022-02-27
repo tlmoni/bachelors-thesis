@@ -202,20 +202,23 @@
 % Oma nimi
 \thesisauthor{Toni Ojala}
 
+% Opinnäytetyön otsikko
 \thesistitle{Adaptiivinen videokuva eri WWW-selaimilla}
 
+% Paikka
 \place{Espoo}
 
 % Kandidaatintyön päivämäärä on sen esityspäivämäärä
 \date{XX.XX.2022}
 
 % Kandidaattiseminaarin vastuuopettaja
-\supervisor{TkT Markus Turunen}
+\supervisor{Yliopistonlehtori Markus Turunen}
 
 % Kandidaatintyön ohjaaja(t) tai diplomityön ohjaaja(t). Ohjaajia saa olla korkeintaan kaksi.
 \advisor{DI Juha Järvinen}
 
-% Aaltologo: syntaksi:
+% Aaltologo
+% Syntaksi:
 % \uselogo{aaltoRed|aaltoBlue|aaltoYellow|aaltoGray|aaltoGrayScale}{?|!|''}
 % Logon kieli on sama kuin dokumentin kieli
 \uselogo{aaltoBlue}{!}
@@ -228,7 +231,7 @@
 \keywords{
   WWW-selain\spc
   adaptiivinen videokuva\spc
-  adaptiivinen striimaus\spc
+  adaptiivinen suoratoisto\spc
   DASH
 }
 
@@ -296,11 +299,13 @@
   WWW-selain      & Tietokoneohjelma, jota käytetään World Wide Webin \\
                   & tai paikallisen verkkosivun käyttämiseen \\
   World Wide Web  & Internet-verkossa toimiva hajautettu tietojärjestelmä \\
+  WorldWideWeb    & Ensimmäinen verkkoselain
 \end{tabular}
 
 \subsection*{Lyhenteet}
 \begin{tabular}{ll}
   WWW       & World Wide Web \\
+  HTML      & HyperText Markup Language \\
   DASH      & Dynamic Adaptive Streaming over HTTP, \\
             & tunnetaan myös nimellä MPEG-DASH \\
 \end{tabular}
@@ -310,7 +315,14 @@
 
 
 \section{Johdanto}
-  Johdanto
+  Michael ja Ronda Hauben kertovat tekstissään \textit{Behind the Net: The Untold History of the ARPANET and
+  Computer Science (Chapter 7)}, kuinka internet sai alkunsa Yhdysvaltain puolustusministeriön aloitteen ja rahoituksen seurauksena syntyneestä ARPANET-nimisestä verkosta 1960-luvulla. \cite{Hauben} Alunperin puolustusvoimille suunniteltu verkko ja alkuaikoina vain muutaman tahon käyttämä verkko on sittemmin kasvanut ja kehittynyt räjähdysmäisesti. Nykyään internetiä käyttää maailmanlaajuisesti noin 63\% väestöstä \cite{ITU} ja esimerkiksi vuonna 2018 80\%:lla suomalaisista oli käytössään älypuhelin \cite{SVT}, jonka avulla käyttää internetiä.
+
+  90-luvun alussa englantilainen tietojenkäsittelytieteilijä Tim Berners-Lee mullisti internetin kehittäessään HTML:n kuvaamaan verkkosivuja ja -dokumentteja, jolla verkkosivut tehdään tänäkin päivänä. Uusi kuvauskieli tarvitsi tietysti parikseen sopivan työkalun, jonka seurauksena ensimmäinen verkkoselain, WorldWideWeb, syntyi. WorldWideWebistä on tultu pitkä matka eteenpäin ja nykyään verkkoselaimia onkin lukuisia erilaisia, jotka kilpailevat keskenään erilaisilla ominaisuuksilla.
+
+  Internetin laajentuessa ja monipuolistuessa myös videomuotoinen sisältö on löytänyt tiensä internetiin. Etenkin nykypäivänä videomuotoisen sisällön kysyntä sekä tarjonta on valtava, jonka takia videosisällön jakamiseen on kehitetty omat teknologiansa. Katsojalle katkottomaan videon katseluun on kehitetty adaptiivinen suoratoisto (eli adaptiivinen videokuva), jonka avulla videon laatu voidaan maksimoida suhteessa käytettävissä oleviin kaistan ja prosessorin kapaiseetteihin. Tämän kyseisen periaatteen mukaisesti erimerkiksi monen suosima YouTube-videopalvelu jakaa videonsa miljoonille katsojille päivittäin.
+
+  Tämä työ esittelee, mistä kaikesta adaptiivinen videokuva teknologiana koostuu sekä miten sen toteutukset eroavat viidessä suosituimmassa WWW-selaimessa. Toisessa luvussa käsitellään modernia WWW-selainta yleisesti, joka luo pohjaa vertailulle. Kolmannessa luvussa avataan videokuvan käsitettä etenkin internetin videosisällön kannalta ja käydään läpi adaptiivisen striimauksen kannalta olennaisimpia formaatteja. Neljännessä luvussa käydään läpi videokuvan suoratoistoa yleisesti sekä etenkin adpatiivista suoratoistoa. Viidennessä luvussa vertaillaan tämän hetken viittä suosituinta WWW-selainta adaptiivisen suoratoiston osalta. Viimeisessä luvussa pohditaan, mitä havaintoja vertailussa on ilmennyt eli miten eri selaimet eroavat adaptiivisen suoratoiston ja siihen liittyvien ominaisuuksien osalta.
 
 \clearpage
 
@@ -336,10 +348,10 @@
 \clearpage
 
 
-\section{Striimaus}
+\section{Suoratoisto}
 
 
-\subsection*{Adaptiivinen striimaus}
+\subsection*{Adaptiivinen suoratoisto}
 
 
 \clearpage
@@ -359,9 +371,30 @@
 
 % Lähdeluettelo
 \thesisbibliography
-
 \begin{thebibliography}{99}
 
+  \bibitem{Hauben}
+    M.\ Hauben, R.\ Hauben.
+    \textit{Behind the Net: The Untold History of the ARPANET and Computer Science (Chapter 7).}
+    Verkkodokumentti.
+    Viitattu 27.2.2022.
+    Saatavissa: \url{doi:10.5210/fm.v3i8.612}
+
+  \bibitem{ITU}
+    \textit{Measuring digital development: Facts and figures 2021.}
+    ISBN 978-92-61-35401-5.
+    2021.
+    Telecommunication Development Bureau, International Telecommunication Union (ITU).
+    Viitattu: 27.2.2022.
+    Saatavissa: \url{https://www.itu.int/itu-d/reports/statistics/facts-figures-2021/}
+
+  \bibitem{SVT}
+    \textit{Suomen virallinen tilasto (SVT): Väestön tieto- ja viestintätekniikan käyttö.}
+    ISSN 2341-8699 [verkkojulkaisu].
+    2018.
+    Helsinki: Tilastokeskus.
+    Viitattu: 27.2.2022.
+    Saatavissa: \url{http://www.stat.fi/til/sutivi/2018/sutivi_2018_2018-12-04_tie_001_fi.html}
 
 \end{thebibliography}
 
