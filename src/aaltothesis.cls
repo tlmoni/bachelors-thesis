@@ -190,8 +190,8 @@
 %% Set up the logo
 %% Note that BIZ and ARTS still (2012-08-17) use old logos as the
 %% aaltologo-package is not up-to-date. Hence there are calls to ECON and TAIK
-%% pic routines. 
-\iftoggle{ARTS}{% 
+%% pic routines.
+\iftoggle{ARTS}{%
   \RequirePackage[TAIK, Uncoated]{aaltologo}%
 }{%
 \iftoggle{BIZ}{%
@@ -257,7 +257,7 @@
 }%
 %
 %%%%%%% Default fonts: Latin Modern (LC 24.9.2015)
-% This is required to overwite any fonts set elsewhere. The package 
+% This is required to overwite any fonts set elsewhere. The package
 % aaltologo.sty sets \rmdefault to newcent, \ttdefault to txtt.
 \renewcommand{\rmdefault}{lmr}%
 \renewcommand{\ttdefault}{lmtt}%
@@ -903,7 +903,7 @@
   \vspace*{3.5mm}%
   \noindent% Position the title and author
   % The title and author, each in their own box, are placed in an enclosing
-  % box with its height limited so as to 
+  % box with its height limited so as to
   % 1. fix the position of the text that follows on the page and
   % 2. to prevent unnecessarily long titles.
   % The vertical space for the title is 120pt, followed by a 6-mm blank
@@ -1138,7 +1138,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% A few more macros
 %%
-%% \phantomsection is the command used by hyperref to set a bookmark to 
+%% \phantomsection is the command used by hyperref to set a bookmark to
 %% starred sections so that links have the right target, e.g. in a toc.
 %% \phantomsection is a dummy command without the hyperref package.
 %\AtBeginDocument{\providecommand*{\phantomsection}{}}%
