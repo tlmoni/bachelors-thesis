@@ -8,7 +8,7 @@
 # Changes from previous release
 # 2018-09-21 Luis Costa
 - aaltothesis.cls underwent a major rewrite. The macros from the etoobox
-  package were used to replace \ifthenelse and the tools from the calc package. 
+  package were used to replace \ifthenelse and the tools from the calc package.
   When creating a plain pdf file, including metadata is now possible. Adding
   additional metadata fields for equivalecy with the PDF/A version required
   the use of the hyperxmp package along with hooks defined in etoobox. This
@@ -30,7 +30,7 @@
   templates, too.
 
 - The graphics in the templates have been renewed. The line diagram (figure 1)
-  is redrawn to fix PDF/A-1b and PDF/A-2b compatibity issues experience 
+  is redrawn to fix PDF/A-1b and PDF/A-2b compatibity issues experience
   earlier (see comments for version 3.1). Also, a MATLAB graph has been added,
   and the last figure, figure 2 earlier, a photograph, has been replaced.
 
@@ -72,7 +72,7 @@
 - A bug in the page numbering was fixed.
 
 - A minor modification (to clean up the code) was made to the \thesisappendix
-  macro. 
+  macro.
 
 # Changes from previous version
 # 2017-10-05 Luis Costa
@@ -97,7 +97,7 @@
   As before, the use of the macros is documented in the template files in the
   macros themselves and the comments.
 
-- NOTE: As of version 3.0, the package requires version 1.5.8 of the pdfx.sty 
+- NOTE: As of version 3.0, the package requires version 1.5.8 of the pdfx.sty
   style package. Version 1.5.84 was the newest version available on the day of
   release of this package.
 
@@ -192,12 +192,12 @@ In MikTeX (and/or the various GUIs):
 ********************************************************************************
 
 All changes are made to the file opinnaytepohja.tex or thesistemplate.tex.
-There is no need to edit the file aaltothesis.cls. 
+There is no need to edit the file aaltothesis.cls.
 
-1. The default language in opinnaytepohja.tex is Finnish (and in 
+1. The default language in opinnaytepohja.tex is Finnish (and in
    thesistemplate.tex it is English).
 
-   To change this in opinnaytepohja.tex, uncomment 
+   To change this in opinnaytepohja.tex, uncomment
     %\documentclass[english,12pt,...]{aaltothesis}
    and comment out
     \documentclass[finnish,12pt,...]{aaltothesis}
@@ -206,16 +206,16 @@ There is no need to edit the file aaltothesis.cls.
 
    To change this, leave out the a-1b option OR change
     \documentclass[...,a-1b,...]{aaltothesis}
-   and uncomment 
+   and uncomment
     %\documentclass[...,dvips,...]{aaltothesis}
- 
+
 3. Choose the kind of thesis you will be creating.
 
-   To change this, choose the correct degree by commenting and uncommenting 
+   To change this, choose the correct degree by commenting and uncommenting
 
     %\univdegree{BSc}
     \univdegree{MSc}
-    %\univdegree{Lic} 
+    %\univdegree{Lic}
 
-# End  
+# End
 ********************************************************************************
