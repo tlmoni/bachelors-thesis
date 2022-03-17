@@ -229,10 +229,9 @@
 % Tiivistelmän avainsanat:
 % Huom! Avainsanat erotetaan toisistaan \spc -makrolla
 \keywords{
-  WWW-selain\spc
+  verkkoselain\spc
   adaptiivinen videokuva\spc
   adaptiivinen suoratoisto\spc
-  DASH
 }
 
 % Tiivistelmän tekstiosa
@@ -298,8 +297,9 @@ Muista laittaa käsitteet ja lyhenteet aakkosjärjestykseen!
 
 \subsection*{Käsitteet}
 \begin{tabular}{ll}
-  URL             & Lyhenne sanoista Uniform Resource Locator. \\
-                  & Jonkin verkkoresurssin (lähtäkohtaisesti verkkosivun) osoite.\\
+  HTTP            & Protokolla, jota selaimet ja palvelimet käyttävät tiedonsiirtoon. \\
+                  & Määrittää miten esimerkiksi teksti, kuva ja video siirretään verkossa. \\
+  URL             & Jonkin verkkoresurssin (lähtäkohtaisesti verkkosivun) osoite.\\
   Verkkoselain    & Tietokoneohjelma, jota käytetään World Wide Webin \\
                   & tai paikallisen verkkosivun käyttämiseen \\
   World Wide Web  & Internet-verkossa toimiva hajautettu tietojärjestelmä \\
@@ -308,9 +308,10 @@ Muista laittaa käsitteet ja lyhenteet aakkosjärjestykseen!
 
 \subsection*{Lyhenteet}
 \begin{tabular}{ll}
-  HTML      & HyperText Markup Language \\
   DASH      & Dynamic Adaptive Streaming over HTTP, \\
             & tunnetaan myös nimellä MPEG-DASH \\
+  HTML      & HyperText Markup Language \\
+  HTTP      & HyperText Transfer Protocol \\
   URL       & Uniform Resource Locator \\
   WWW       & World Wide Web \\
 \end{tabular}
@@ -319,6 +320,7 @@ Muista laittaa käsitteet ja lyhenteet aakkosjärjestykseen!
 \cleardoublepage
 
 
+% 1 Johdanto
 \section{Johdanto}
   Elämää ilman internetiä voi olla nykyään hankala kuvitella. Michael ja Ronda Hauben kertovat tekstissään \textit{Behind the Net: The Untold History of the ARPANET and Computer Science (Chapter 7)}, kuinka internet sai alkunsa Yhdysvaltain puolustusministeriön aloitteen ja rahoituksen seurauksena syntyneestä ARPANET-nimisestä verkosta 1960-luvulla. \cite{Hauben} Alunperin puolustusvoimille suunniteltu verkko ja alkuaikoina vain muutaman tahon käyttämä verkko on sittemmin kasvanut ja kehittynyt räjähdysmäisesti. Nykyään internetiä käyttää maailmanlaajuisesti noin 63\% väestöstä \cite{ITU} ja esimerkiksi vuonna 2018 80\%:lla suomalaisista oli käytössään älypuhelin \cite{SVT}, jonka avulla käyttää internetiä.
 
@@ -340,11 +342,18 @@ Muista laittaa käsitteet ja lyhenteet aakkosjärjestykseen!
 % \subsubsection{ala-alaotsikko}
 % Tätä pitemälle ei pidä jaotella.
 
+% 2 Verkkoselain
 \section{Verkkoselain}
 
-Verkkoselain on tietokoneohjelma, jonka päätarkoitus on noutaa sisältöä internetistä tai paikalliselta tallennusvälineeltä käyttäjän katseltavaksi ja käytettäväksi. Verkkoselainta käytetään lähtökohtaisesti syöttämällä sille URL-osoite. URL on lyhenne sanoista Uniform Resource Locator, joka on merkkijono ja jonkin verkkoresurssin (lähtökohtaisesti verkkosivu) osoite \cite{URL}. Selain noutaa osoitteen mukaisen verkkosivun, jonka jälkeen selainmoottori renderoi eli hahmontaa sivun sisällön käyttäjän katseltavaksi.
+Verkkoselain on tietokoneohjelma, jonka päätarkoitus on noutaa sisältöä internetistä tai paikalliselta tallennusvälineeltä käyttäjän katseltavaksi ja käytettäväksi. Verkkoselainta käytetään yleensä (kuten kuvassa 1 prosessia kuvataan) syöttämällä sille URL-osoite. URL on lyhenne sanoista Uniform Resource Locator, joka on merkkijono ja jonkin verkkoresurssin (lähtökohtaisesti verkkosivu) osoite \cite{URL}. Selain noutaa osoitteen mukaisen verkkosivun, jonka jälkeen selainmoottori renderoi eli hahmontaa sivun sisällön käyttäjän katseltavaksi. Noudettu verkkosivu voi sisältää esimerkiksi tekstiä, kuvia, ääntä, videoita tai muuta vastaavaa sisältöä. Verkkosivujen katselemisen lisäksi selaimia käytetään nykyään myös esimerkiksi PDF-tiedostojen katseluun.
 
-Vaikka alkujaan internetin selaamiseen olikin vain yksi selain, on nykyään lukuisia erilaisia selaimia ja useille eri laitteille, joihin kuuluu esimerkiksi tietokoneet, älypuhelimet tablettitietokoneet, pelikonsolit ja älytelevisiot. Taulukossa 1 esitetyn tilaston mukaan tällä hetkellä viisi suosituinta tietokoneella käytettyä verkkoselainta ovat Google Chrome, Safari, Microsoft Edge, Mozilla Firefox ja Opera. Tässä työssä tulemme keskittymään noihin viiteen selaimeen adaptiivisen videokuvan näkökulmasta.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[height=9cm]{./img/browser.png}
+  \caption{Yksinkertainen malli selaimen käyttöprosessista \label{kuva1}}
+\end{figure}
+
+Vaikka alkujaan internetin selaamiseen olikin olemassa vain muutamia selaimia, on niitä nykyään lukuisia erilaisia ja selaimia on tietokoneiden lisäksi useille eri laitteille, kuten älypuhelimet tablettitietokoneet, pelikonsolit ja älytelevisiot. Taulukossa 1 esitetyn tilaston mukaan tällä hetkellä viisi suosituinta tietokoneella käytettyä verkkoselainta ovat Google Chrome, Safari, Microsoft Edge, Mozilla Firefox ja Opera. Tässä työssä tulemme keskittymään noihin viiteen selaimeen adaptiivisen videokuvan näkökulmasta.
 
 \begin{table}[htb]
   \caption{Verkkoselainten markkinaosuus tietokonekäytössä helmikuussa 2022 StatCounterin mukaan. \cite{StatCounter} \label{taulukko1}}
@@ -361,24 +370,36 @@ Vaikka alkujaan internetin selaamiseen olikin vain yksi selain, on nykyään luk
   }
 \end{table}
 
-Selainten mittavasta lukumäärästä huolimatta selainmoottoreita ei suinkaan ole yhtä montaa, ja suosituimmistakin selaimista peräti 3 käyttävät samaa selainydintä. Firefox käyttää Mozillan kehittämää Gecko-nimistä selainmoottoria, Safari käyttää Applen kehittämää WebKit-selainmoottoria ja Chrome, Edge sekä Opera käyttävät kaikki Chromium-projektille yhteistä Blink-selainmoottoria.
+Moderni verkkoselain koostuu useammasta komponentista, kuten käyttöliittymä, selainmoottori, muisti sekä JavaScript-tulkki. Kaikista keskeisin näistä komponenteista on selainmoottori eli selainydin. Selainmoottorin päätehtävänä on muuntaa HTML-tiedostot ja muut verkkosivun resurssit (kuten audio- ja videoresurssit) interaktiiviseksi visuaaliseksi esitykseksi käyttäjän laitteella. Selainten mittavasta lukumäärästä huolimatta selainmoottoreita ei suinkaan ole yhtä montaa, ja suosituimmistakin selaimista peräti 3 käyttävät samaa selainydintä. Firefox käyttää Mozillan kehittämää Gecko-nimistä selainmoottoria, Safari käyttää Applen kehittämää WebKit-selainmoottoria ja Chrome, Edge sekä Opera käyttävät kaikki Chromium-projektille yhteistä Blink-selainmoottoria. \cite{Nield} Tämän työn kannalta merkittäviä selainmoottoreita ovat edellä mainitut Gecko, WebKit ja Blink, sillä viidessä suosituimmassa selaimessa on käytössä vain 3 eri selainmoottoria.
+
+Verkkoselainten käyttöliittymä on selaimesta riippumatta usein hyvin samankaltainen. Yleensä selaimen käyttöliittymästä löytyy ainakin seuraavat elementit:
+\begin{itemize}
+  \item[--] osoiterivi URL-osoitteiden syöttämiseen
+  \item[--] eteenpäin ja takaisin navigoimista varten olevat painikkeet
+  \item[--] kotipainike (joka vie käyttäjän asettamalle kotisivulle tai -sivuille)
+  \item[--] päivitys- ja pysäytyspainike sivun resurssien päivittämiseen tai resurssien lataamisen pysäyttämiseen
+  \item[--] kirjanmerkkien luomisen painike tai työkalut
+  \item[--] hallintapainike, josta pääsee esimerkiksi selaimen asetuksiin
+\end{itemize}
+Vaikka moni muu ominaisuus verkkoselainten toiminnasta on standardien säätelemää, ei käyttöliittymän ominaisuuksista ole erillisiä standardeja. Silti yllä mainitut ja myös kuvassa 2 havaittavat ns. vakioelementit löytyvät lähes poikkeuksetta jokaisesta selaimesta tänä päivänä. Lisäksi selaimista löytyy usein jokin hakukone (esimerkiksi Google tai DuckDuckGo) integroituna osoiteriviin, välilehtijärjestelmä jonka avulla jokaista verkkosivua ei tarvitse avata omassa ikkunassaan sekä monia muita käytettävyyttä huomattavasti lisääviä ominaisuuksia.
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[height=5cm]{./img/chrome.png}
-  \caption{Google Chrome -selaimen aloitusnäkymä \label{kuva1}}
+  \includegraphics[height=2cm]{./img/browser-ui.png}
+  \caption{Google Chrome -selaimen käyttöliittymä \label{kuva2}}
 \end{figure}
-
 
 \clearpage
 
-
+% 3 Videokuva
 \section{Videokuva}
 
 
+
 \clearpage
 
 
+% 4 Suoratoisto
 \section{Suoratoisto}
 
 
@@ -391,19 +412,20 @@ Selainten mittavasta lukumäärästä huolimatta selainmoottoreita ei suinkaan o
 \clearpage
 
 
+% 5 Vertailu
 \section{Vertailu}
 
 
 \clearpage
 
-
+% 6 Yhteenveto
 \section{Yhteenveto}
 
 
 \clearpage
 
 
-% Lähdeluettelo
+% Viitteet
 \thesisbibliography
 \begin{thebibliography}{99}
 
@@ -449,13 +471,15 @@ Selainten mittavasta lukumäärästä huolimatta selainmoottoreita ei suinkaan o
     Viitattu: 15.3.2022.
     Saatavissa: \url{https://gs.statcounter.com/browser-market-share/desktop/worldwide/#monthly-202202-202202-bar}.
 
+  \bibitem{Nield}
+    D.\ Nield.
+    \textit{Which Browser Engine Powers Your Web Browsing — And Why Does It Matter?.}
+    12.4.2019.
+    Verkkodokumentti.
+    Viitattu 16.3.2022.
+    Saatavissa: \url{https://gizmodo.com/which-browser-engine-powers-your-web-browsing-and-why-d-1833935288}.
+
+
 \end{thebibliography}
-
-
-% Liitteet
-% Poista a.o. \clearpage- ja \thesisappendix -makrot, jos liiteitä ei ole.
-% \clearpage
-% \thesisappendix
-
 
 \end{document}
