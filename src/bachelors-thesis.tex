@@ -295,9 +295,12 @@
 
 \subsection*{Käsitteet}
 \begin{tabular}{ll}
-  HTML5           & Yleiskäsite moderneille verkkoteknologioille, joihin kuuluu HTML, CSS ja JavaScript
+  HTML5           & Yleiskäsite moderneille verkkoteknologioille, joihin kuuluu \\
+                  & HTML, CSS ja JavaScript \\
   HTTP            & Protokolla, jota selaimet ja palvelimet käyttävät tiedonsiirtoon. \\
-                  & Määrittää miten esimerkiksi teksti, kuva ja video siirretään verkossa. \\
+                  & Määrittää miten esim. teksti, kuva ja video siirretään verkossa. \\
+  Koodekki        & Laite tai ohjelmisto, joka mahdollistaa esimerkiksi videon \\
+                  & pakkaamisen tai purkamisen. \\
   URL             & Jonkin verkkoresurssin (lähtäkohtaisesti verkkosivun) osoite.\\
   Verkkoselain    & Tietokoneohjelma, jota käytetään World Wide Webin \\
                   & tai paikallisen verkkosivun käyttämiseen \\
@@ -323,13 +326,13 @@
 
 % 1 Johdanto
 \section{Johdanto}
-  Elämää ilman internetiä voi olla nykyään hankala kuvitella. Michael ja Ronda Hauben kertovat tekstissään \textit{Behind the Net: The Untold History of the ARPANET and Computer Science (Chapter 7)}, kuinka internet sai alkunsa Yhdysvaltain puolustusministeriön aloitteen ja rahoituksen seurauksena syntyneestä ARPANET-nimisestä verkosta 1960-luvulla. \cite{Hauben} Alunperin puolustusvoimille suunniteltu verkko ja alkuaikoina vain muutaman tahon käyttämä verkko on sittemmin kasvanut ja kehittynyt räjähdysmäisesti. Nykyään internetiä käyttää maailmanlaajuisesti noin 63\% väestöstä \cite{ITU} ja esimerkiksi vuonna 2018 80\%:lla suomalaisista oli käytössään älypuhelin \cite{SVT}, jonka avulla käyttää internetiä.
+  Elämää ilman internetiä voi olla nykyään hankala kuvitella. Michael ja Ronda Hauben kertovat tekstissään \textit{Behind the Net: The Untold History of the ARPANET and Computer Science (Chapter 7)}, kuinka internet sai alkunsa Yhdysvaltain puolustusministeriön aloitteen ja rahoituksen seurauksena syntyneestä ARPANET-nimisestä verkosta 1960-luvulla. \cite{Hauben} Alunperin puolustusvoimille suunniteltu verkko ja alkuaikoina vain muutaman tahon käyttämä verkko on sittemmin kasvanut ja kehittynyt räjähdysmäisesti. Nykyään internetiä käyttää maailmanlaajuisesti noin 63\% väestöstä \cite{ITU} ja esimerkiksi vuonna 2018 80\%:lla suomalaisista oli käytössään älypuhelin \cite{SVT}, jonka avulla käyttää internetiä. \\
 
-  90-luvun alussa englantilainen tietojenkäsittelytieteilijä Tim Berners-Lee mullisti internetin kehittäessään HyperText Markup Languagen (lyh. HTML) kuvaamaan verkkosivuja ja -dokumentteja, jolla verkkosivut tehdään tänäkin päivänä. Uusi kuvauskieli tarvitsi tietysti parikseen sopivan työkalun, jonka seurauksena ensimmäinen verkkoselain, WorldWideWeb, syntyi \cite{WorldWideWeb}. WorldWideWebistä on tultu pitkä matka eteenpäin ja nykyään verkkoselaimia onkin lukuisia erilaisia, jotka kilpailevat keskenään muun muassa erilaisilla ominaisuuksilla ja käytettävyydellä.
+  \noindent 90-luvun alussa englantilainen tietojenkäsittelytieteilijä Tim Berners-Lee mullisti internetin kehittäessään HyperText Markup Languagen (lyh. HTML) kuvaamaan verkkosivuja ja -dokumentteja, jolla verkkosivut tehdään tänäkin päivänä. Uusi kuvauskieli tarvitsi tietysti parikseen sopivan työkalun, jonka seurauksena ensimmäinen verkkoselain, WorldWideWeb, syntyi \cite{WorldWideWeb}. WorldWideWebistä on tultu pitkä matka eteenpäin ja nykyään verkkoselaimia onkin lukuisia erilaisia, jotka kilpailevat keskenään muun muassa erilaisilla ominaisuuksilla ja käytettävyydellä. \\
 
-  Internetin laajentuessa ja monipuolistuessa myös videomuotoinen sisältö on löytänyt tiensä internetiin. Etenkin nykypäivänä videomuotoisen sisällön kysyntä sekä tarjonta on valtava, jonka takia videosisällön jakamiseen on kehitetty omat teknologiansa. Katsojalle katkottomaan videon katseluun on kehitetty adaptiivinen suoratoisto (eli adaptiivinen videokuva), jonka avulla videon laatu voidaan maksimoida suhteessa käytettävissä oleviin kaistan ja prosessorin kapaiseetteihin. Tämän kyseisen periaatteen mukaisesti erimerkiksi monen suosima YouTube-videopalvelu jakaa videonsa miljoonille katsojille päivittäin.
+  \noindent Internetin laajentuessa ja monipuolistuessa myös videomuotoinen sisältö on löytänyt tiensä internetiin. Etenkin nykypäivänä videomuotoisen sisällön kysyntä sekä tarjonta on valtava, jonka takia videosisällön jakamiseen on kehitetty omat teknologiansa. Katsojalle katkottomaan videon katseluun on kehitetty adaptiivinen suoratoisto (eli adaptiivinen videokuva), jonka avulla videon laatu voidaan maksimoida suhteessa käytettävissä oleviin kaistan ja prosessorin kapaiseetteihin. Tämän kyseisen periaatteen mukaisesti erimerkiksi monen suosima YouTube-videopalvelu jakaa videonsa miljoonille katsojille päivittäin. \\
 
-  Tämä työ esittelee, mistä kaikesta adaptiivinen videokuva teknologiana koostuu sekä miten sen toteutukset eroavat viidessä suosituimmassa verkkoselaimessa. Toisessa luvussa käsitellään modernia verkkoselainta yleisesti, joka luo pohjaa vertailulle. Kolmannessa luvussa avataan videokuvan käsitettä etenkin internetin videosisällön kannalta ja käydään läpi adaptiivisen striimauksen kannalta olennaisimpia formaatteja. Neljännessä luvussa käydään läpi videokuvan suoratoistoa yleisesti sekä etenkin adpatiivista suoratoistoa. Viidennessä luvussa vertaillaan tämän hetken viittä suosituinta verkkoselainta adaptiivisen suoratoiston osalta. Viimeisessä luvussa pohditaan, mitä havaintoja vertailussa on ilmennyt eli miten eri selaimet eroavat adaptiivisen suoratoiston ja siihen liittyvien ominaisuuksien osalta.
+  \noindent Tämä työ esittelee, mistä kaikesta adaptiivinen videokuva teknologiana koostuu sekä miten sen toteutukset eroavat viidessä suosituimmassa verkkoselaimessa. Toisessa luvussa käsitellään modernia verkkoselainta yleisesti, joka luo pohjaa vertailulle. Kolmannessa luvussa avataan videokuvan käsitettä etenkin internetin videosisällön kannalta ja käydään läpi adaptiivisen striimauksen kannalta olennaisimpia formaatteja. Neljännessä luvussa käydään läpi videokuvan suoratoistoa yleisesti sekä etenkin adpatiivista suoratoistoa. Viidennessä luvussa vertaillaan tämän hetken viittä suosituinta verkkoselainta adaptiivisen suoratoiston osalta. Viimeisessä luvussa pohditaan, mitä havaintoja vertailussa on ilmennyt eli miten eri selaimet eroavat adaptiivisen suoratoiston ja siihen liittyvien ominaisuuksien osalta.
 
 \clearpage
 
@@ -357,16 +360,17 @@ Verkkoselain on tietokoneohjelma, jonka päätarkoitus on noutaa sisältöä int
 \noindent Vaikka alkujaan internetin selaamiseen olikin olemassa vain muutamia selaimia, on niitä nykyään lukuisia erilaisia ja selaimia on tietokoneiden lisäksi useille eri laitteille, kuten älypuhelimet tablettitietokoneet, pelikonsolit ja älytelevisiot. Taulukossa 1 esitetyn tilaston mukaan tällä hetkellä viisi suosituinta tietokoneella käytettyä verkkoselainta ovat Google Chrome, Safari, Microsoft Edge, Mozilla Firefox ja Opera. Tässä työssä tulemme keskittymään noihin viiteen selaimeen adaptiivisen videokuvan näkökulmasta. \\
 
 \begin{table}[htb]
-  \caption{Verkkoselainten markkinaosuus tietokonekäytössä helmikuussa 2022 StatCounterin mukaan. \cite{StatCounter} \label{taulukko1}}
+  \caption{Selainten markkinaosuus tietokonekäytössä helmikuussa 2022. \cite{StatCounter}\cite{Similiarweb} \label{taulukko1}}
   \centering
   \fbox{
-    \begin{tabular}{l|l}
-      Google Chrome     & 64,91\% \\ \hline
-      Safari            & 9,77\%  \\ \hline
-      Microsoft Edge    & 9,61\%  \\ \hline
-      Mozilla Firefox   & 9,47\%  \\ \hline
-      Opera             & 2,87\%  \\ \hline
-      Muut              & 3,37\%
+    \begin{tabular}{l|l|l}
+      Selain            & StatCounter & Similiarweb \\ \hline
+      Google Chrome     & 64,91\%     & 65,47\% \\
+      Safari            & 9,77\%      & 10,04\% \\
+      Microsoft Edge    & 9,61\%      & 11,34\% \\
+      Mozilla Firefox   & 9,47\%      & 7,10\% \\
+      Opera             & 2,87\%      & 1,94\% \\
+      Muut              & 3,37\%      & 4,10\%
     \end{tabular}
   }
 \end{table}
@@ -408,17 +412,17 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
 
 \noindent Videot olivat alunperin analogisia, joiden värijärjestelmiin ja koodausmenetelmiin kuuluivat muun muassa NTSC, PAL ja SECAM. Nykyään analogisiin videoihin törmää kuitenkin enää harvoin, sillä internetin sekä usean digitaalisen tallennusvälineen ja järjestelmän käytön yleistymisen myötä myös digitaalisten videoiden määrä on kasvanut hurjasti. Lisäksi myös televisiolähetykset siirtyivät Suomessa kokonaan digitaaliseen formaattiin vuonna 2007 \cite{Digita}, joka entisestään vähensi analogisen videon esiintyvyyttä. Tässä työssä käsitellään nimenomaan digitaalista videota etenkin suoratoistokäytössä. \\
 
-\noindent Kuten videoiden toistamiseen ja katsomiseen on lukuisia erilaisia järjestelmiä, on digitaalisen videon formaatteja monia erilaisia. Taulukossa 2 on listattuna tämän hetken oleellisimpia digitaalisia videoformaatteja, sekä hieman avattu niiden pääsääntöisiä käyttökohteita. Kuten taulukossakin on mainittu, MP4 ja WebM ovat verkkokäyttöön parhaiten soveltuvat ja samalla suosituimmat formaatit.
+\noindent Kuten videoiden toistamiseen ja katsomiseen on lukuisia erilaisia järjestelmiä, on digitaalisen videon formaatteja myös monia erilaisia. Videoformaateista puhutaan myös usein videosäiliöinä, joka on hyvin kuvaava, sillä videot usein sisältävät videosignaalin lisäksi myös ääntä. Taulukossa 2 on listattuna tämän hetken oleellisimpia digitaalisia videoformaatteja, sekä hieman avattu niiden pääsääntöisiä käyttökohteita. Kuten taulukossakin on mainittu, MP4 ja WebM ovat verkkokäyttöön parhaiten soveltuvat ja tästä johtuen suosituimmat formaatit. \\
 
 \begin{table}[htb]
-  \caption{Listaus suosituista videoformaateista ja niiden käyttökohteista. \cite{Maayan}\cite{Adobe} \label{taulukko2}}
+  \caption{Suosittuja videoformaatteja ja niiden käyttökohteita. \cite{Can I Use}\cite{Maayan}\cite{Adobe} \label{taulukko2}}
   \centering
   \fbox{
     \begin{tabular}{l|l|l}
       Videoformaatti  & Käyttö                      & Huomioita \\ \hline
       MP4             & Verkkosisältö, suoratoisto  & Selkeästi suosituin ja \\
                       &                             & käytetyin formaatti \\
-      WebM            & Verkkosisältö, suoratoisto  & Vasta hiljattain tuettu \\
+      WebM            & Verkkosisältö, suoratoisto  & Monipuolinen, huono tuki \\
                       &                             & Applen alustoilla \\
       AVI             & TV ja päätiedostot          & Monipuolinen ja usein laadukas \\
                       &                             & formaatti, suuret tiedostokoot \\
@@ -426,11 +430,44 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
                       &                             & ympäristöstä \\
       WMV             & Windows, suoratoisto        & Suhteellisen rajoittunut \\
                       &                             & Windows-ympäristöön \\
-      MKV             & Elokuvat ja TV              & AVI:n kaltainen \\
-      MPEG-2          & DVD                         & Suhteellisen harvinainen \\
+      Matroska        & Elokuvat ja TV              & AVI:n kaltainen \\
     \end{tabular}
   }
 \end{table}
+
+\noindent Syy MP4- ja WebM-formaattien suosioon löytyy niiden videodatan pakkaamiseen käytetyistä koodekeista. Yksi täysteräväpiirtovideon (1920x1080) kuva täydellä värillä (4 tavua per pikseli) on kooltaan 8 294 400 tavua. Tyypillisellä virkistystaajuudella (30 kuvaa sekunnissa) yksi sekunti täysteräväpiirtovideota vie siis 248 832 000 tavua tilaa eli noin 249 megatavua, yksi minuutti videota puolestaan noin 14,93 gigatavua ja yksi tunti videota olisi noin 895,8 gigatavua. Suhteutettaessa  internetyhteyden siirtonopeuksiin, olisi tällaisen pakkaamattoman videon suoratoisto siis todella vaativaa, sillä pelkän videoraidan siirto vaatisi 249 MB/s siirtonopeutta. \\
+
+\noindent Jotta täysteräväpiirtovideon siirtäminen verkkoyhteyden avulla olisi realistista, tarvitsee videota pakata pienemmäksi. Videokoodekit ovat tässä avainasemassa. Koodekki on tässä yhteydessä ohjelmisto, jolla digitaalinen video voidaan pakata tietyn videokoodausformaatin mukaiseksi sekä purkaa kyseessä olevasta formaatista toistettavaksi signaaliksi \cite{Codec}.
+
+\noindent Koodekista ja yhteensopivasta videokoodausformaatista käytetään usein samaa nimeä, jonka takia puhekielessä formaatin sijasta saatetaan helposti puhua koodekista. Tämän hetken yleisimpiin koodekkeihin sekä formaatteihin kuuluu muun muassa AV1, H.264/AVC, H.265/HEVC ja VP9 \cite{Codec guide}. Taulukosta 3 nähdään kootusti edellä mainittujen koodekkien tukemat säiliöformaatit. Taulukosta on havaittavissa hyvin nopeasti syy MP4-säiliön suosioon, sillä siihen voi sisällyttää kaikkia edellä mainittujen formaattien mukaista videota. \\
+
+\begin{table}[htb]
+  \caption{Suosittuja videokoodekkeja ja niiden säiliöitä. \cite{Codec guide} \label{taulukko3}}
+  \centering
+  \fbox{
+    \begin{tabular}{l|l|l}
+      Koodekki    & Koko nimi                     & Säiliötuki \\ \hline
+      AV1         & AOMedia Video 1               & MP4, WebM \\
+      H.264/AVC   & Advanced Video Coding	        & MP4, 3GP \\
+      H.265/HEVC  & High Efficiency Video Coding  & MP4 \\
+      VP9         & Video Processor 9             & MP4, WebM, Ogg \\
+    \end{tabular}
+  }
+\end{table}
+
+\subsection*{MP4}
+
+MP4 eli MPEG-4 Part 14 on digitaalinen multimediasäiliöformaatti, jota käytetään lähtökohtaisesti videon ja äänen säilömiseen, mutta se voi sisältää näiden lisäksi myös erilaista dataa, kuten tekstitystä tai still-kuvia. \\
+
+%\begin{figure}[htb]
+%  \centering
+%  \includegraphics[height=3cm]{./img/youtube.png}
+%  \caption{Esimerkki YouTuben MP4-muotoisen videon teknisistä tiedoista. Videossa on koodekkeina AV1 ja Opus. \label{kuva3}}
+%\end{figure}
+
+\subsection*{WebM}
+
+WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka suunniteltiin varta vasten korkealaatuiseksi avoimeksi standardiksi verkkokäyttöön. \cite{WebM}
 
 \noindent
 
@@ -512,6 +549,12 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
     Viitattu: 15.3.2022.
     Saatavissa: \url{https://gs.statcounter.com/browser-market-share/desktop/worldwide/#monthly-202202-202202-bar}.
 
+  \bibitem{Similiarweb}
+    \textit{Top Desktop Browsers Market Share in February 2022.}
+    Similiarweb.
+    Viitattu: 29.3.2022.
+    Saatavissa: \url{https://www.similarweb.com/browsers/worldwide/desktop/}.
+
   \bibitem{Nield}
     D.\ Nield.
     \textit{Which Browser Engine Powers Your Web Browsing — And Why Does It Matter?.}
@@ -550,6 +593,25 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
     Verkkodokumentti.
     Viitattu: 24.3.2022.
     Saatavissa: \url{https://go.bitmovin.com/hubfs/Bitmovin-Video-Developer-Report-2018.pdf}.
+
+  \bibitem{WebM}
+    \textit{About WebM.}
+    Verkkodokumentti.
+    Viitattu: 30.3.2022.
+    Saatavissa: \url{https://www.webmproject.org/about/}.
+
+  \bibitem{Codec}
+    \textit{Video Codec.}
+    Verkkodokumentti.
+    Viitattu: 30.3.2022.
+    Saatavissa: \url{https://www.pcmag.com/encyclopedia/term/video-codec}.
+
+  \bibitem{Codec guide}
+    \textit{Web video codec guide.}
+    Verkkodokumentti.
+    Viitattu: 30.3.2022.
+    Saatavissa: \url{https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs}.
+
 
 
 \end{thebibliography}
