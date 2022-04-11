@@ -326,13 +326,13 @@
 
 % 1 Johdanto
 \section{Johdanto}
-  Elämää ilman internetiä voi olla nykyään hankala kuvitella. Michael ja Ronda Hauben kertovat tekstissään \textit{Behind the Net: The Untold History of the ARPANET and Computer Science (Chapter 7)}, kuinka internet sai alkunsa Yhdysvaltain puolustusministeriön aloitteen ja rahoituksen seurauksena syntyneestä ARPANET-nimisestä verkosta 1960-luvulla. \cite{Hauben} Alunperin puolustusvoimille suunniteltu verkko ja alkuaikoina vain muutaman tahon käyttämä verkko on sittemmin kasvanut ja kehittynyt räjähdysmäisesti. Nykyään internetiä käyttää maailmanlaajuisesti noin 63\% väestöstä \cite{ITU} ja esimerkiksi vuonna 2018 80\%:lla suomalaisista oli käytössään älypuhelin \cite{SVT}, jonka avulla käyttää internetiä. \\
+  Elämää ilman internetiä voi olla nykyään hankala kuvitella. Michael ja Ronda Hauben kertovat tekstissään \textit{Behind the Net: The Untold History of the ARPANET and Computer Science (Chapter 7)}, kuinka internet sai alkunsa Yhdysvaltain puolustusministeriön aloitteen ja rahoituksen seurauksena syntyneestä ARPANET-nimisestä verkosta 1960-luvulla. \cite{Hauben} Alun perin puolustusvoimille suunniteltu verkko ja alkuaikoina vain muutaman tahon käyttämä verkko on sittemmin kasvanut ja kehittynyt räjähdysmäisesti. Nykyään internetiä käyttää maailmanlaajuisesti noin 63 \% väestöstä \cite{ITU} ja esimerkiksi vuonna 2018 80 \%:lla suomalaisista oli käytössään älypuhelin \cite{SVT}, jonka avulla käyttää internetiä. \\
 
-  \noindent 90-luvun alussa englantilainen tietojenkäsittelytieteilijä Tim Berners-Lee mullisti internetin kehittäessään HyperText Markup Languagen (lyh. HTML) kuvaamaan verkkosivuja ja -dokumentteja, jolla verkkosivut tehdään tänäkin päivänä. Uusi kuvauskieli tarvitsi tietysti parikseen sopivan työkalun, jonka seurauksena ensimmäinen verkkoselain, WorldWideWeb, syntyi \cite{WorldWideWeb}. WorldWideWebistä on tultu pitkä matka eteenpäin ja nykyään verkkoselaimia onkin lukuisia erilaisia, jotka kilpailevat keskenään muun muassa erilaisilla ominaisuuksilla ja käytettävyydellä. \\
+  \noindent 1990-luvun alussa englantilainen tietojenkäsittelytieteilijä Tim Berners-Lee mullisti internetin kehittäessään HyperText Markup Languagen (lyh. HTML) kuvaamaan verkkosivuja ja -dokumentteja, jolla verkkosivut tehdään tänäkin päivänä. Uusi kuvauskieli tarvitsi tietysti parikseen sopivan työkalun, jonka seurauksena ensimmäinen verkkoselain, WorldWideWeb, syntyi \cite{WorldWideWeb}. WorldWideWebistä on tultu pitkä matka eteenpäin ja nykyään verkkoselaimia onkin lukuisia erilaisia, jotka kilpailevat keskenään muun muassa erilaisilla ominaisuuksilla ja käytettävyydellä. \\
 
   \noindent Internetin laajentuessa ja monipuolistuessa myös videomuotoinen sisältö on löytänyt tiensä internetiin. Etenkin nykypäivänä videomuotoisen sisällön kysyntä sekä tarjonta on valtava, jonka takia videosisällön jakamiseen on kehitetty omat teknologiansa. Katsojalle katkottomaan videon katseluun on kehitetty adaptiivinen suoratoisto (eli adaptiivinen videokuva), jonka avulla videon laatu voidaan maksimoida suhteessa käytettävissä oleviin kaistan ja prosessorin kapaiseetteihin. Tämän kyseisen periaatteen mukaisesti erimerkiksi monen suosima YouTube-videopalvelu jakaa videonsa miljoonille katsojille päivittäin. \\
 
-  \noindent Tämä työ esittelee, mistä kaikesta adaptiivinen videokuva teknologiana koostuu sekä miten sen toteutukset eroavat viidessä suosituimmassa verkkoselaimessa. Toisessa luvussa käsitellään modernia verkkoselainta yleisesti, joka luo pohjaa vertailulle. Kolmannessa luvussa avataan videokuvan käsitettä etenkin internetin videosisällön kannalta ja käydään läpi adaptiivisen striimauksen kannalta olennaisimpia formaatteja. Neljännessä luvussa käydään läpi videokuvan suoratoistoa yleisesti sekä etenkin adpatiivista suoratoistoa. Viidennessä luvussa vertaillaan tämän hetken viittä suosituinta verkkoselainta adaptiivisen suoratoiston osalta. Viimeisessä luvussa pohditaan, mitä havaintoja vertailussa on ilmennyt eli miten eri selaimet eroavat adaptiivisen suoratoiston ja siihen liittyvien ominaisuuksien osalta.
+  \noindent Tämä työ esittelee, mistä kaikesta adaptiivinen videokuva teknologiana koostuu ja miten sen toteutukset eroavat viidessä suosituimmassa verkkoselaimessa. Toisessa luvussa käsitellään modernia verkkoselainta yleisesti, joka luo pohjaa vertailulle. Kolmannessa luvussa avataan videokuvan käsitettä etenkin internetin videosisällön kannalta ja käydään läpi adaptiivisen striimauksen kannalta olennaisimpia formaatteja. Neljännessä luvussa käydään läpi videokuvan suoratoistoa yleisesti sekä etenkin adpatiivista suoratoistoa. Viidennessä luvussa vertaillaan tämän hetken viittä suosituinta verkkoselainta adaptiivisen suoratoiston osalta. Viimeisessä luvussa pohditaan, mitä havaintoja vertailussa on ilmennyt eli miten eri selaimet eroavat adaptiivisen suoratoiston ja siihen liittyvien ominaisuuksien osalta.
 
 \clearpage
 
@@ -349,7 +349,7 @@
 % 2 Verkkoselain
 \section{Verkkoselain}
 
-Verkkoselain on tietokoneohjelma, jonka päätarkoitus on noutaa sisältöä internetistä tai paikalliselta tallennusvälineeltä käyttäjän katseltavaksi ja käytettäväksi. Verkkoselainta käytetään yleensä (kuten kuvassa 1 prosessia kuvataan) syöttämällä sille URL-osoite. URL on lyhenne sanoista Uniform Resource Locator, joka on merkkijono ja jonkin verkkoresurssin (lähtökohtaisesti verkkosivu) osoite \cite{URL}. Selain noutaa osoitteen mukaisen verkkosivun, jonka jälkeen selainmoottori renderoi eli hahmontaa sivun sisällön käyttäjän katseltavaksi. Noudettu verkkosivu voi sisältää esimerkiksi tekstiä, kuvia, ääntä, videoita tai muuta vastaavaa sisältöä. Verkkosivujen katselemisen lisäksi selaimia käytetään nykyään myös esimerkiksi PDF-tiedostojen katseluun. \\
+Verkkoselain on tietokoneohjelma, jonka päätarkoitus on noutaa sisältöä internetistä tai paikalliselta tallennusvälineeltä käyttäjän katseltavaksi ja käytettäväksi. Verkkoselainta käytetään yleensä (kuten kuvassa 1 prosessia kuvataan) syöttämällä sille URL-osoite. URL on lyhenne sanoista Uniform Resource Locator, joka on merkkijono ja jonkin verkkoresurssin (lähtökohtaisesti verkkosivu) osoite \cite{URL}. Selain noutaa osoitteen mukaisen verkkosivun, jonka jälkeen selainmoottori renderöi eli hahmontaa sivun sisällön käyttäjän katseltavaksi. Noudettu verkkosivu voi sisältää esimerkiksi tekstiä, kuvia, ääntä, videoita tai muuta vastaavaa sisältöä. Verkkosivujen katselemisen lisäksi selaimia käytetään nykyään myös esimerkiksi PDF-tiedostojen katseluun. \\
 
 \begin{figure}[htb]
   \centering
@@ -357,7 +357,7 @@ Verkkoselain on tietokoneohjelma, jonka päätarkoitus on noutaa sisältöä int
   \caption{Yksinkertainen malli selaimen käyttöprosessista \label{kuva1}}
 \end{figure}
 
-\noindent Vaikka alkujaan internetin selaamiseen olikin olemassa vain muutamia selaimia, on niitä nykyään lukuisia erilaisia ja selaimia on tietokoneiden lisäksi useille eri laitteille, kuten älypuhelimet tablettitietokoneet, pelikonsolit ja älytelevisiot. Taulukossa 1 esitetyn tilaston mukaan tällä hetkellä viisi suosituinta tietokoneella käytettyä verkkoselainta ovat Google Chrome, Safari, Microsoft Edge, Mozilla Firefox ja Opera. Tässä työssä tulemme keskittymään noihin viiteen selaimeen adaptiivisen videokuvan näkökulmasta. \\
+\noindent Vaikka alkujaan internetin selaamiseen olikin olemassa vain muutamia selaimia, on niitä nykyään lukuisia erilaisia ja selaimia on tietokoneiden lisäksi useille eri laitteille, kuten älypuhelimet tablettitietokoneet, pelikonsolit ja älytelevisiot. Taulukossa 1 esitetyn tilaston mukaan tällä hetkellä viisi suosituinta tietokoneella käytettyä verkkoselainta ovat Google Chrome, Safari, Microsoft Edge, Mozilla Firefox ja Opera \cite{StatCounter}\cite{Similiarweb}. Tässä työssä keskitytään noihin viiteen selaimeen adaptiivisen videokuvan näkökulmasta. \\
 
 \begin{table}[htb]
   \caption{Selainten markkinaosuus tietokonekäytössä helmikuussa 2022. \cite{StatCounter}\cite{Similiarweb} \label{taulukko1}}
@@ -365,21 +365,21 @@ Verkkoselain on tietokoneohjelma, jonka päätarkoitus on noutaa sisältöä int
   \fbox{
     \begin{tabular}{l|l|l}
       Selain            & StatCounter & Similiarweb \\ \hline
-      Google Chrome     & 64,91\%     & 65,47\% \\
-      Safari            & 9,77\%      & 10,04\% \\
-      Microsoft Edge    & 9,61\%      & 11,34\% \\
-      Mozilla Firefox   & 9,47\%      & 7,10\% \\
-      Opera             & 2,87\%      & 1,94\% \\
-      Muut              & 3,37\%      & 4,10\%
+      Google Chrome     & 64,91 \%    & 65,47 \% \\
+      Safari            & 9,77 \%     & 10,04 \% \\
+      Microsoft Edge    & 9,61 \%     & 11,34 \% \\
+      Mozilla Firefox   & 9,47 \%     & 7,10 \% \\
+      Opera             & 2,87 \%     & 1,94 \% \\
+      Muut              & 3,37 \%     & 4,10 \%
     \end{tabular}
   }
 \end{table}
 
-\noindent Moderni verkkoselain koostuu useammasta komponentista, kuten käyttöliittymä, selainmoottori, muisti sekä JavaScript-tulkki. Kaikista keskeisin näistä komponenteista on selainmoottori eli selainydin. Selainmoottorin päätehtävänä on muuntaa HTML-tiedostot ja muut verkkosivun resurssit (kuten audio- ja videoresurssit) interaktiiviseksi visuaaliseksi esitykseksi käyttäjän laitteella. \\
+\noindent Moderni verkkoselain koostuu useammasta komponentista, kuten käyttöliittymästä, selainmoottorista, muistista sekä JavaScript-tulkista. Kaikista keskeisin näistä komponenteista on selainmoottori eli selainydin. Selainmoottorin päätehtävänä on muuntaa HTML-tiedostot ja muut verkkosivun resurssit (kuten audio- ja videoresurssit) interaktiiviseksi visuaaliseksi esitykseksi käyttäjän laitteella. \\
 
 \noindent Selainten mittavasta lukumäärästä huolimatta selainmoottoreita ei suinkaan ole yhtä montaa, ja suosituimmistakin selaimista peräti 3 käyttävät samaa selainydintä. Firefox käyttää Mozillan kehittämää Gecko-nimistä selainmoottoria, Safari käyttää Applen kehittämää WebKit-selainmoottoria ja Chrome, Edge sekä Opera käyttävät kaikki Chromium-projektille yhteistä Blink-selainmoottoria. \cite{Nield} Tämän työn kannalta merkittäviä selainmoottoreita ovat edellä mainitut Gecko, WebKit ja Blink, sillä viidessä suosituimmassa selaimessa on käytössä vain 3 eri selainmoottoria.
 
-\noindent Verkkoselainten käyttöliittymä on selaimesta riippumatta usein hyvin samankaltainen. Yleensä selaimen käyttöliittymästä löytyy ainakin seuraavat elementit:
+\noindent Verkkoselainten käyttöliittymä on selaimesta riippumatta usein hyvin samankaltainen. Yleensä selaimen käyttöliittymässä on ainakin seuraavat elementit:
 \begin{itemize}
   \item[--] osoiterivi URL-osoitteiden syöttämiseen
   \item[--] eteenpäin ja takaisin navigoimista varten olevat painikkeet
@@ -401,7 +401,7 @@ Vaikka moni muu ominaisuus verkkoselainten toiminnasta on standardien säätelem
 % 3 Videokuva
 \section{Videokuva}
 
-Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisista signaaleista muodostetaan liikkuvaa kuvaa. Video siis koostuu lähtökohtaisesti suuresta määrästä still-kuvia, jotka toistetaan nopeasti peräkkäin jolla simuloidaan liikettä. Videojärjestelmiä ja -teknologioita on nykyään hyvin monia erilaisia ja niissä on useita eroavaisuuksia esimerkiksi näissä ominaisuuksissa:
+Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisista signaaleista muodostetaan liikkuvaa kuvaa. Video siis koostuu lähtökohtaisesti suuresta määrästä still-kuvia, jotka toistetaan nopeasti peräkkäin jolla simuloidaan liikettä. Videojärjestelmiä ja -teknologioita on nykyään hyvin monia erilaisia, ja niissä on useita eroavaisuuksia esimerkiksi näissä ominaisuuksissa:
 
 \begin{itemize}
   \item[--] resoluutio eli kuvatarkkuus
@@ -410,7 +410,7 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
   \item[--] väriominaisuudet
 \end{itemize}
 
-\noindent Videot olivat alunperin analogisia, joiden värijärjestelmiin ja koodausmenetelmiin kuuluivat muun muassa NTSC, PAL ja SECAM. Nykyään analogisiin videoihin törmää kuitenkin enää harvoin, sillä internetin sekä usean digitaalisen tallennusvälineen ja järjestelmän käytön yleistymisen myötä myös digitaalisten videoiden määrä on kasvanut hurjasti. Lisäksi myös televisiolähetykset siirtyivät Suomessa kokonaan digitaaliseen formaattiin vuonna 2007 \cite{Digita}, joka entisestään vähensi analogisen videon esiintyvyyttä. Tässä työssä käsitellään nimenomaan digitaalista videota etenkin suoratoistokäytössä. \\
+\noindent Videot olivat alun perin analogisia, joiden värijärjestelmiin ja koodausmenetelmiin kuuluivat muun muassa NTSC, PAL ja SECAM. Nykyään analogisia videoita käytetään kuitenkin enää harvoin, sillä internetin sekä usean digitaalisen tallennusvälineen ja järjestelmän käytön yleistymisen myötä myös digitaalisten videoiden määrä on kasvanut hurjasti. Lisäksi myös televisiolähetykset siirtyivät Suomessa kokonaan digitaaliseen formaattiin vuonna 2007 \cite{Digita}, mikä entisestään vähensi analogisen videon esiintyvyyttä. Tässä työssä käsitellään nimenomaan digitaalista videota etenkin suoratoistokäytössä. \\
 
 \noindent Kuten videoiden toistamiseen ja katsomiseen on lukuisia erilaisia järjestelmiä, on digitaalisen videon formaatteja myös monia erilaisia. Videoformaateista puhutaan myös usein videosäiliöinä, joka on hyvin kuvaava, sillä videot usein sisältävät videosignaalin lisäksi myös ääntä. Taulukossa 2 on listattuna tämän hetken oleellisimpia digitaalisia videoformaatteja, sekä hieman avattu niiden pääsääntöisiä käyttökohteita. Kuten taulukossakin on mainittu, MP4 ja WebM ovat verkkokäyttöön parhaiten soveltuvat ja tästä johtuen suosituimmat formaatit. \\
 
@@ -435,7 +435,7 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
   }
 \end{table}
 
-\noindent Syy MP4- ja WebM-formaattien suosioon löytyy niiden videodatan pakkaamiseen käytetyistä koodekeista. Yksi täysteräväpiirtovideon (1920x1080) kuva täydellä värillä (4 tavua per pikseli) on kooltaan 8 294 400 tavua. Tyypillisellä virkistystaajuudella (30 kuvaa sekunnissa) yksi sekunti täysteräväpiirtovideota vie siis 248 832 000 tavua tilaa eli noin 249 megatavua, yksi minuutti videota puolestaan noin 14,93 gigatavua ja yksi tunti videota olisi noin 895,8 gigatavua. Suhteutettaessa  internetyhteyden siirtonopeuksiin, olisi tällaisen pakkaamattoman videon suoratoisto siis todella vaativaa, sillä pelkän videoraidan siirto vaatisi 249 MB/s siirtonopeutta. \\
+\noindent Syy MP4- ja WebM-formaattien suosioon löytyy niiden videodatan pakkaamiseen käytetyistä koodekeista. Yksi täysteräväpiirtovideon (1920x1080) kuva täydellä värillä (4 tavua per pikseli) on kooltaan 8 294 400 tavua. Tyypillisellä virkistystaajuudella (30 kuvaa sekunnissa) yksi sekunti täysteräväpiirtovideota vie siis 248 832 000 tavua tilaa eli noin 249 megatavua, yksi minuutti videota puolestaan noin 14,93 gigatavua ja yksi tunti videota olisi noin 895,8 gigatavua. Suhteutettaessa  internetyhteyden siirtonopeuksiin, olisi tällaisen pakkaamattoman videon suoratoisto siis todella vaativaa, sillä pelkän videoraidan siirto vaatisi 249 MB/s:n siirtonopeutta. \\
 
 \noindent Jotta täysteräväpiirtovideon siirtäminen verkkoyhteyden avulla olisi realistista, tarvitsee videota pakata pienemmäksi. Videokoodekit ovat tässä avainasemassa. Koodekki on tässä yhteydessä ohjelmisto, jolla digitaalinen video voidaan pakata tietyn videokoodausformaatin mukaiseksi sekä purkaa kyseessä olevasta formaatista toistettavaksi signaaliksi \cite{Codec}.
 
@@ -569,6 +569,12 @@ WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka
     Viitattu: 24.3.2022.
     Saatavissa: \url{https://www.digita.fi/antennitv/vapaat-kanavat-ja-vastaanotto/hyodyllista-tietoa-tvsta/kehitysvaiheet/}.
 
+  \bibitem{Codec}
+    \textit{Video Codec.}
+    Verkkodokumentti.
+    Viitattu: 30.3.2022.
+    Saatavissa: \url{https://www.pcmag.com/encyclopedia/term/video-codec}.
+
   \bibitem{Can I Use}
     \textit{Browser support tables for modern web technologies — Can I use video format?.}
     Verkkodokumentti.
@@ -588,11 +594,11 @@ WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka
     Viitattu: 24.3.2022.
     Saatavissa: \url{https://www.adobe.com/uk/creativecloud/video/discover/best-video-format.html}
 
-  \bibitem{Bitmovin}
-    \textit{Video Developer Report 2018.}
+  \bibitem{Codec guide}
+    \textit{Web video codec guide.}
     Verkkodokumentti.
-    Viitattu: 24.3.2022.
-    Saatavissa: \url{https://go.bitmovin.com/hubfs/Bitmovin-Video-Developer-Report-2018.pdf}.
+    Viitattu: 30.3.2022.
+    Saatavissa: \url{https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs}.
 
   \bibitem{WebM}
     \textit{About WebM.}
@@ -600,18 +606,11 @@ WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka
     Viitattu: 30.3.2022.
     Saatavissa: \url{https://www.webmproject.org/about/}.
 
-  \bibitem{Codec}
-    \textit{Video Codec.}
-    Verkkodokumentti.
-    Viitattu: 30.3.2022.
-    Saatavissa: \url{https://www.pcmag.com/encyclopedia/term/video-codec}.
-
-  \bibitem{Codec guide}
-    \textit{Web video codec guide.}
-    Verkkodokumentti.
-    Viitattu: 30.3.2022.
-    Saatavissa: \url{https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs}.
-
+  %\bibitem{Bitmovin}
+  %  \textit{Video Developer Report 2018.}
+  %  Verkkodokumentti.
+  %  Viitattu: 24.3.2022.
+  %  Saatavissa: \url{https://go.bitmovin.com/hubfs/Bitmovin-Video-Developer-Report-2018.pdf}.
 
 
 \end{thebibliography}
