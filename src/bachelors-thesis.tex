@@ -412,7 +412,7 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
 
 \noindent Videot olivat alun perin analogisia, joiden värijärjestelmiin ja koodausmenetelmiin kuuluivat muun muassa NTSC, PAL ja SECAM. Nykyään analogisia videoita käytetään kuitenkin enää harvoin, sillä internetin sekä usean digitaalisen tallennusvälineen ja järjestelmän käytön yleistymisen myötä myös digitaalisten videoiden määrä on kasvanut hurjasti. Lisäksi myös televisiolähetykset siirtyivät Suomessa kokonaan digitaaliseen formaattiin vuonna 2007 \cite{Digita}, mikä entisestään vähensi analogisen videon esiintyvyyttä. Tässä työssä käsitellään nimenomaan digitaalista videota etenkin suoratoistokäytössä. \\
 
-\noindent Kuten videoiden toistamiseen ja katsomiseen on lukuisia erilaisia järjestelmiä, on digitaalisen videon formaatteja myös monia erilaisia. Videoformaateista puhutaan myös usein videosäiliöinä, joka on hyvin kuvaava, sillä videot usein sisältävät videosignaalin lisäksi myös ääntä. Taulukossa 2 on listattuna tämän hetken oleellisimpia digitaalisia videoformaatteja, sekä hieman avattu niiden pääsääntöisiä käyttökohteita. Kuten taulukossakin on mainittu, MP4 ja WebM ovat verkkokäyttöön parhaiten soveltuvat ja tästä johtuen suosituimmat formaatit.
+\noindent Kuten videoiden toistamiseen ja katsomiseen on lukuisia erilaisia järjestelmiä, on digitaalisen videon formaatteja myös monia erilaisia. Videoformaateista puhutaan myös usein videosäiliöinä, joka on hyvin kuvaava, sillä videot usein sisältävät videosignaalin lisäksi myös ääntä. Taulukossa 2 on listattuna tämän hetken oleellisimpia digitaalisia videoformaatteja, sekä hieman avattu niiden pääsääntöisiä käyttökohteita. Kuten taulukossakin on mainittu, MP4 ja WebM ovat verkkokäyttöön parhaiten soveltuvat ja tästä johtuen suosituimmat formaatit. \\
 
 \begin{table}[htb]
   \caption{Suosittuja videoformaatteja ja niiden käyttökohteita. \cite{Can I Use}\cite{Maayan}\cite{Adobe} \label{taulukko2}}
@@ -477,14 +477,25 @@ WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka
 % 4 Suoratoisto
 \section{Suoratoisto}
 
-
+Suoratoistolla, josta usein käytetään puhekielessä termiä striimaus, tarkoitetaan tiedonsiirtotapaa, jossa toistettava mediatiedosto siirretään kohteeseen jatkuvana tietovirtana siten, että tiedostoa voidaan prosessoida vastaanottavalla päätelaitteella jo ennen kuin koko tiedosto on lähetetty \cite{Britannica}. Esimerkiksi videota suoratoistettaessa videotiedostoa siis ladataan samanaikaisesti, kun sitä jo toistetaan päätelaitteella. Suoratoiston tarkoitus teknologiana on mahdollistaa median toistaminen nopeammin ja helpommin kuin perinteisellä tavalla, jossa koko tiedosto ladataan ensin käytettävälle laitteelle, jonka jälkeen sen voi vasta toistaa. Toistamisen nopeutus on huomattava, sillä huolimatta nykyaikaisten internet-yhteyksien nopeudesta, on esimerkiksi elokuvan lataaminen ja katsominen huomattavan hidas ja epämieluisa prosessi ilman suoratoistoteknologioita. Suoratoistoa käytetään usein esimerkiksi video- ja audiomedian siirtämiseen ja toistamiseen suoratoistopalveluiden, kuten Youtuben, Netflixin ja Spotifyn, toimesta. Suoratoistoteknologioiden käyttö ei kuitenkaan rajoitu vain video- ja äänimedian siirtämiseen ja toistamiseen, vaan sitä hyödynnetään myös muun muassa reaaliaikaiseen suoratoistoon. Teknologiat, kuten videopuhelut ja muu reaaliaikainen suoratoisto eli livestriimaus, sekä jopa pelien etäpelaamiseen esimerkiksi Google Stadia -alustalla, \cite{Stadia} ovat esimerkkejä reaaliaikaisen suoratoiston käyttökohteista. Tässä työssä keskitytään erityisesti videoiden suoratoistoon sekä siihen liittyviin teknologioihin.
 
 \subsection*{Adaptiivinen suoratoisto}
+
+Siinä missä suoratoiston tarkoituksena on mahdollistaa median toistaminen nopeammin ja helpommin kuin koko tiedoston ensin lataamalla, on adaptiivisen suoratoiston tarkoituksena vielä tämän lisäksi taata käyttäjälle täysin katkoton median toistokokemus. Adaptiivisessa suoratoistossa eli adaptiivisen bittinopeuden suoratoistossa toistettava media on transkoodattu eri bittinopeuden mukaisiin ja eri laatuisiin toistettaviin muotoihin. Kuten kuvassa 3 on havainnollistettu, laadukkaampaa videota eli korkeammalla bittinopeudella olevaa varianttia toistetaan, kun käytössä on enemmän kaistanleveyttä. Käytettävän kaistanleveyden laskiessa toistettavan videon laatua lasketaan myös tarpeen mukaan ja toistettavaksi valitaan matalamman bittinopeuden variantti.
+
+Tarkemmin sanottuna adaptiivinen suoratoisto on siis metodi suoratoistaa videota HTTP:n avulla, missä toistettava video on transkoodattu useille eri bittinopeuksille. Jokainen eri bittinopeuden virroista on lisäksi segmentoitu pieniin, usean sekunnin kestoisiin segmentteihin. Yhden segmentin kesto vaihtelee käytettävän toteutuksen mukaan, mutta segmentin pituus on usein kahden ja kymmenen sekuntin väliltä. Segmentit nimetään ja jaotellaan yksilöivästi, jonka jälkeen niistä koostetaan oikean järjestyksen mukainen soittolista. Tämä kyseinen soittolista rakentuu yleensä laadun mukaan hakemistoihin jaotelluista numeroiduista videosegmenteistä ja mahdollisesti myös audiosegmenteistä (riippuu toteutuksesta). Tiedostoa, joka kertoo päätelaitteelle tämän kyseisen soittolistan sisällön ja tiedostojen peräkkäisen järjestyksen sekä muut videon toistamiseen tarvittavat tiedot, kutsutaan manifestiksi tai manifestitiedostoksi.
+
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[height=6.5cm]{./img/abr-bandwidth.png}
+  \caption{Adaptiivisen suoratoiston toiminnan mallinnus kaistanleveyden ja tukkeutumisen avulla \label{kuva3}}
+\end{figure}
 
 \begin{figure}[htb]
   \centering
   \includegraphics[height=10cm]{./img/abr-streaming.png}
-  \caption{Adaptiivisen suoratoiston toimintaperiaatteen visualisointi \label{kuva3}}
+  \caption{HTTP-perusteisen adaptiivisen suoratoiston toimintaperiaatteen visualisointi \label{kuva4}}
 \end{figure}
 
 \subsection*{DASH}
@@ -611,6 +622,24 @@ WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka
     Verkkodokumentti.
     Viitattu: 30.3.2022.
     Saatavissa: \url{https://www.webmproject.org/about/}.
+
+  \bibitem{Britannica}
+    \textit{streaming | Definition, Meaning and Facts | Brotannica.}
+    Verkkodokumentti.
+    Viitattu: 17.5.2022.
+    Saatavissa: \url{https://www.britannica.com/topic/streaming-data-transmission}.
+
+  \bibitem{Stadia}
+    \textit{Stadia - Yksi paikka kaikille pelitavoille.}
+    Verkkodokumentti.
+    Viitattu: 17.5.2022.
+    Saatavissa: \url{https://stadia.google.com/}.
+
+  \bibitem{Segment}
+    \textit{Optimal Adaptive Streaming Formats MPEG-DASH & HLS Segment Length.}
+    Verkkodokumentti.
+    Viitattu: 1.6.2022.
+    Saatavissa: \url{https://bitmovin.com/mpeg-dash-hls-segment-length/}.
 
   %\bibitem{Bitmovin}
   %  \textit{Video Developer Report 2018.}
