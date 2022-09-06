@@ -187,6 +187,9 @@
 % Matematiikan fontteja, symboleja ja muotoiluja lisää, näitä tarvitaan usein
 \usepackage{amsfonts, amssymb, amsbsy, amsmath}
 
+\usepackage{setspace}
+\onehalfspacing
+
 % Tutkinto-ohjelma
 \degreeprogram{Elektroniikka ja sähkötekniikka}
 
@@ -392,7 +395,7 @@ Vaikka moni muu ominaisuus verkkoselainten toiminnasta on standardien säätelem
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[height=2cm]{./img/browser-ui.png}
+  \includegraphics[height=3cm]{./img/browser-ui.png}
   \caption{Google Chrome -selaimen käyttöliittymä \label{kuva2}}
 \end{figure}
 
@@ -437,7 +440,7 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
 
 \noindent Syy MP4- ja WebM-formaattien suosioon löytyy niiden videodatan pakkaamiseen käytetyistä koodekeista. Yksi täysteräväpiirtovideon (1920x1080) kuva täydellä värillä (4 tavua per pikseli) on kooltaan 8 294 400 tavua. Tyypillisellä virkistystaajuudella (30 kuvaa sekunnissa) yksi sekunti täysteräväpiirtovideota vie siis 248 832 000 tavua tilaa eli noin 249 megatavua, yksi minuutti videota puolestaan noin 14,93 gigatavua ja yksi tunti videota olisi noin 895,8 gigatavua. Suhteutettaessa  internetyhteyden siirtonopeuksiin, olisi tällaisen pakkaamattoman videon suoratoisto siis todella vaativaa, sillä pelkän videoraidan siirto vaatisi 249 MB/s:n siirtonopeutta. \\
 
-\noindent Jotta täysteräväpiirtovideon siirtäminen verkkoyhteyden avulla olisi realistista, tarvitsee videota pakata pienemmäksi. Videokoodekit ovat tässä avainasemassa. Koodekki on tässä yhteydessä ohjelmisto, jolla digitaalinen video voidaan pakata tietyn videokoodausformaatin mukaiseksi sekä purkaa kyseessä olevasta formaatista toistettavaksi signaaliksi \cite{Codec}.
+\noindent Jotta täysteräväpiirtovideon siirtäminen verkkoyhteyden avulla olisi realistista, tarvitsee videota pakata pienemmäksi. Videokoodekit ovat tässä avainasemassa. Koodekki on tässä yhteydessä ohjelmisto, jolla digitaalinen video voidaan pakata tietyn videokoodausformaatin mukaiseksi sekä purkaa kyseessä olevasta formaatista toistettavaksi signaaliksi \cite{Codec}. \\
 
 \noindent Koodekista ja yhteensopivasta videokoodausformaatista käytetään usein samaa nimeä, jonka takia puhekielessä formaatin sijasta saatetaan helposti puhua koodekista. Tämän hetken yleisimpiin koodekkeihin sekä formaatteihin kuuluu muun muassa AV1, H.264/AVC, H.265/HEVC ja VP9 \cite{Codec guide}. Taulukosta 3 nähdään kootusti edellä mainittujen koodekkien tukemat säiliöformaatit. Taulukosta on havaittavissa hyvin nopeasti syy MP4-säiliön suosioon, sillä siihen voi sisällyttää kaikkia edellä mainittujen formaattien mukaista videota.
 
@@ -457,19 +460,17 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
 
 \subsection*{MP4}
 
-MP4 eli MPEG-4 Part 14 on digitaalinen multimediasäiliöformaatti, jota käytetään lähtökohtaisesti videon ja äänen säilömiseen, mutta se voi sisältää näiden lisäksi myös erilaista dataa, kuten tekstitystä tai still-kuvia. \\
+MP4 eli MPEG-4 Part 14 on digitaalinen multimediasäiliöformaatti, jota käytetään lähtökohtaisesti videon ja äänen säilömiseen, mutta se voi sisältää näiden lisäksi myös erilaista dataa, kuten tekstitystä tai still-kuvia. MP4:n suosio verkkokäytössä johtuu pitkälti sen pienestä tiedostokoosta ja laajasta koodekkituesta. MP4 tukee esimerkiksi kaikkia taulukossa 3 mainittuja suosituimpia koodekkeja. MP4:ää käytetään formaattina etenkin koodekkien H.264 ja H.265 sekä myös AV1:n kanssa. \\
 
-%\begin{figure}[htb]
-%  \centering
-%  \includegraphics[height=3cm]{./img/youtube.png}
-%  \caption{Esimerkki YouTuben MP4-muotoisen videon teknisistä tiedoista. Videossa on koodekkeina AV1 ja Opus. \label{kuva3}}
-%\end{figure}
+\begin{figure}[htb]
+  \centering
+  \includegraphics[height=4cm]{./img/youtube.png}
+  \caption{Esimerkki YouTuben MP4-muotoisen videon teknisistä tiedoista. Videon koodekki on AV1 ja audion Opus. \label{kuva3}}
+\end{figure}
 
 \subsection*{WebM}
 
-WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka suunniteltiin varta vasten korkealaatuiseksi avoimeksi standardiksi verkkokäyttöön. \cite{WebM}
-
-\noindent
+WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka suunniteltiin varta vasten korkealaatuiseksi avoimeksi standardiksi verkkokäyttöön. \cite{WebM} Ero WebM:n ja MP4:n välillä näkyy eniten ideologiaerona, sillä WebM tukee ainoastaan ilmaisia video- ja audiokoodekkeja. Tuettuihin koodekkeihin kuuluvat ensisijaisesti WebM-projektin itsensä kehittämät videokoodekit VP8 ja VP9 sekä Xiph Foundationin kehittämät audiokoodekit Vorbis ja Opus. WebM tukee myös AV1:tä, mutta AV1:n käyttö WebM-säiliössä on harvinaisempaa, kuin MP4-säiliössä. \\
 
 \clearpage
 
@@ -477,32 +478,56 @@ WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka
 % 4 Suoratoisto
 \section{Suoratoisto}
 
-Suoratoistolla, josta usein käytetään puhekielessä termiä striimaus, tarkoitetaan tiedonsiirtotapaa, jossa toistettava mediatiedosto siirretään kohteeseen jatkuvana tietovirtana siten, että tiedostoa voidaan prosessoida vastaanottavalla päätelaitteella jo ennen kuin koko tiedosto on lähetetty \cite{Britannica}. Esimerkiksi videota suoratoistettaessa videotiedostoa siis ladataan samanaikaisesti, kun sitä jo toistetaan päätelaitteella. Suoratoiston tarkoitus teknologiana on mahdollistaa median toistaminen nopeammin ja helpommin kuin perinteisellä tavalla, jossa koko tiedosto ladataan ensin käytettävälle laitteelle, jonka jälkeen sen voi vasta toistaa. Toistamisen nopeutus on huomattava, sillä huolimatta nykyaikaisten internet-yhteyksien nopeudesta, on esimerkiksi elokuvan lataaminen ja katsominen huomattavan hidas ja epämieluisa prosessi ilman suoratoistoteknologioita. Suoratoistoa käytetään usein esimerkiksi video- ja audiomedian siirtämiseen ja toistamiseen suoratoistopalveluiden, kuten Youtuben, Netflixin ja Spotifyn, toimesta. Suoratoistoteknologioiden käyttö ei kuitenkaan rajoitu vain video- ja äänimedian siirtämiseen ja toistamiseen, vaan sitä hyödynnetään myös muun muassa reaaliaikaiseen suoratoistoon. Teknologiat, kuten videopuhelut ja muu reaaliaikainen suoratoisto eli livestriimaus, sekä jopa pelien etäpelaamiseen esimerkiksi Google Stadia -alustalla, \cite{Stadia} ovat esimerkkejä reaaliaikaisen suoratoiston käyttökohteista. Tässä työssä keskitytään erityisesti videoiden suoratoistoon sekä siihen liittyviin teknologioihin.
+Suoratoistolla, josta usein käytetään puhekielessä termiä striimaus, tarkoitetaan tiedonsiirtotapaa, jossa toistettava mediatiedosto siirretään kohteeseen jatkuvana tietovirtana siten, että tiedostoa voidaan prosessoida vastaanottavalla päätelaitteella jo ennen kuin koko tiedosto on lähetetty \cite{Britannica}. Esimerkiksi videota suoratoistettaessa videotiedostoa siis ladataan samanaikaisesti, kun sitä jo toistetaan päätelaitteella. Suoratoiston tarkoitus teknologiana on mahdollistaa median toistaminen nopeammin ja helpommin kuin perinteisellä tavalla, jossa koko tiedosto ladataan ensin käytettävälle laitteelle, jonka jälkeen sen voi vasta toistaa. Toistamisen nopeutus on huomattava, sillä huolimatta nykyaikaisten internet-yhteyksien nopeudesta, on esimerkiksi elokuvan lataaminen ja katsominen huomattavan hidas ja epämieluisa prosessi ilman suoratoistoteknologioita. Suoratoistoa käytetään usein esimerkiksi video- ja audiomedian siirtämiseen ja toistamiseen suoratoistopalveluiden, kuten Youtuben, Netflixin ja Spotifyn, toimesta. Suoratoistoteknologioiden käyttö ei kuitenkaan rajoitu vain video- ja äänimedian siirtämiseen ja toistamiseen, vaan sitä hyödynnetään myös muun muassa reaaliaikaiseen suoratoistoon. Teknologiat, kuten videopuhelut ja muu reaaliaikainen suoratoisto eli livestriimaus, sekä jopa pelien etäpelaaminen esimerkiksi Google Stadia -alustalla, \cite{Stadia} ovat esimerkkejä reaaliaikaisen suoratoiston käyttökohteista. Tässä työssä keskitytään erityisesti videoiden suoratoistoon sekä siihen liittyviin teknologioihin.
 
 \subsection*{Adaptiivinen suoratoisto}
 
-Siinä missä suoratoiston tarkoituksena on mahdollistaa median toistaminen nopeammin ja helpommin kuin koko tiedoston ensin lataamalla, on adaptiivisen suoratoiston tarkoituksena vielä tämän lisäksi taata käyttäjälle täysin katkoton median toistokokemus. Adaptiivisessa suoratoistossa eli adaptiivisen bittinopeuden suoratoistossa toistettava media on transkoodattu eri bittinopeuden mukaisiin ja eri laatuisiin toistettaviin muotoihin. Kuten kuvassa 3 on havainnollistettu, laadukkaampaa videota eli korkeammalla bittinopeudella olevaa varianttia toistetaan, kun käytössä on enemmän kaistanleveyttä. Käytettävän kaistanleveyden laskiessa toistettavan videon laatua lasketaan myös tarpeen mukaan ja toistettavaksi valitaan matalamman bittinopeuden variantti.
-
-Tarkemmin sanottuna adaptiivinen suoratoisto on siis metodi suoratoistaa videota HTTP:n avulla, missä toistettava video on transkoodattu useille eri bittinopeuksille. Jokainen eri bittinopeuden virroista on lisäksi segmentoitu pieniin, usean sekunnin kestoisiin segmentteihin. Yhden segmentin kesto vaihtelee käytettävän toteutuksen mukaan, mutta segmentin pituus on usein kahden ja kymmenen sekuntin väliltä. Segmentit nimetään ja jaotellaan yksilöivästi, jonka jälkeen niistä koostetaan oikean järjestyksen mukainen soittolista. Tämä kyseinen soittolista rakentuu yleensä laadun mukaan hakemistoihin jaotelluista numeroiduista videosegmenteistä ja mahdollisesti myös audiosegmenteistä (riippuu toteutuksesta). Tiedostoa, joka kertoo päätelaitteelle tämän kyseisen soittolistan sisällön ja tiedostojen peräkkäisen järjestyksen sekä muut videon toistamiseen tarvittavat tiedot, kutsutaan manifestiksi tai manifestitiedostoksi.
-
+\noindent Siinä missä suoratoiston tarkoituksena on mahdollistaa median toistaminen nopeammin ja helpommin kuin koko tiedoston ensin lataamalla, on adaptiivisen suoratoiston tarkoituksena vielä tämän lisäksi taata käyttäjälle täysin katkoton median toistokokemus. Adaptiivisessa suoratoistossa eli adaptiivisen bittinopeuden suoratoistossa toistettava media on transkoodattu eri bittinopeuden mukaisiin ja eri laatuisiin toistettaviin muotoihin. Kuten kuvassa 4 on havainnollistettu, laadukkaampaa videota eli korkeammalla bittinopeudella olevaa varianttia toistetaan, kun käytössä on enemmän kaistanleveyttä. Käytettävän kaistanleveyden laskiessa toistettavan videon laatua lasketaan myös tarpeen mukaan ja toistettavaksi valitaan matalamman bittinopeuden variantti. \\
 
 \begin{figure}[htb]
   \centering
   \includegraphics[height=6.5cm]{./img/abr-bandwidth.png}
-  \caption{Adaptiivisen suoratoiston toiminnan mallinnus kaistanleveyden ja tukkeutumisen avulla \label{kuva3}}
+  \caption{Adaptiivisen suoratoiston toiminnan mallinnus kaistanleveyden ja tukkeutumisen avulla \label{kuva4}}
 \end{figure}
+
+\noindent Tarkemmin kuvattuna adaptiivinen suoratoisto on siis metodi suoratoistaa videota, missä toistettava video on transkoodattu useille eri bittinopeuksille. Tärkeimmät adaptiivisen suoratoiston teknologiat on toteutettu HTTP:n pohjalle. Jokainen eri bittinopeuden virroista on lisäksi segmentoitu pieniin, usean sekunnin kestoisiin segmentteihin. Yhden segmentin kesto vaihtelee käytettävän toteutuksen mukaan, mutta segmentin pituus on usein kahden ja kymmenen sekuntin väliltä. Segmentit nimetään ja jaotellaan yksilöivästi, jonka jälkeen niistä koostetaan oikean järjestyksen mukainen soittolista. Tämä kyseinen soittolista rakentuu yleensä laadun mukaan lohkoihin jaotelluista numeroiduista videosegmenteistä ja audiosegmenteistä (riippuu toteutuksesta). Yleisesti käytössä on kahta tapaa: limitetty (engl. multiplexed) ja epälimitetty (engl. non-multiplexed). Limitetyssä toteutuksessa video- ja audiosegmentit ovat limittäin sijoitettu samalle tietovirralle ja ne ladataan peräkkäin vuorotellen samasta tietovirrasta. Limittämättömässä toteutuksessa käytössä on kaksi tietovirtaa: yksi videosegmenteille ja toinen audiosegmenteille. Tiedostoa, joka kertoo päätelaitteelle tämän kyseisen soittolistan sisällön ja tiedostojen peräkkäisen järjestyksen sekä muut videon toistamiseen tarvittavat tiedot, kutsutaan manifestiksi tai manifestitiedostoksi. \\
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[height=10cm]{./img/abr-streaming.png}
-  \caption{HTTP-perusteisen adaptiivisen suoratoiston toimintaperiaatteen visualisointi \label{kuva4}}
+  \includegraphics[height=11cm]{./img/abr-streaming.png}
+  \caption{HTTP-perusteisen adaptiivisen suoratoiston toimintaperiaatteen visualisointi \label{kuva5}}
 \end{figure}
+
+\noindent Havainnollistava kaavio HTTP-perusteisen adaptiivisen suoratoistoteknologian, kuten DASH ja HLS (joista kerrotaan tarkemmin seuraavissa kappaleissa), käytöstä ja toiminnasta on esitetty kuvassa 5. Kun käyttäjä alkaa katsomaan videota verkkoselaimellaan (esimerkiksi YouTuben kautta), verkkoselain lataa ensimmäisenä videota koskevan manifestitiedoston. Tämän jälkeen verkkoselain selvittää manifestitiedostosta, mitä resursseja sen pitää ladata videon toistamiseksi. Selain tekee resurssipyyntöjä sisällönjakeluverkolle, jossa mediaresurssit sijaitsevat valmiina ladattavaksi, manifestitiedoston mukaisesti, jonka jälkeen kyseiset resurssit eli video- ja audiosegmentit ladataan sisällönjakeluverkosta käyttäjän laitteelle. Kun tarvittavat resurssit eli ensimmäinen tai ensimmäiset videosegmentit on ladattu käyttäjän laitteelle, verkkoselaimen videosoitin alkaa toistamaan videota. Jotta videon katselu ei olisi pätkivää, sisällönjakeluverkosta ladataan usein kerralla useampi segmentti varastoon puskuriksi, jos se on verkon käytettävissä olevan kaistanleveyden puitteissa mahdollista. Puskuriksi ladattavien segmenttien määrä vaihtelee toteutuksesta ja saatavilla olevasta kaistanleveydestä: mitä nopeampi yhteys ja enemmän kaistanleveyttä, sitä enemmän videosegmenttejä ehditään lataamaan puskuriin. Ladattavien videosegmenttien laatu valitaan yleensä aina edellisten segmenttien lataamisen jälkeen. Ohjelmisto tarkistaa saatavilla olevan kaistanleveyden, jonka mukaan valitaan kaistanleveystikkaasta, josta on esimerkki taulukossa 4, sopivan laatuinen videosegmentti tai -segmentit ladattavaksi. \\
+
+\begin{table}[htb]
+  \caption{Esimerkki siitä, miltä Dynamic Adaptive Streaming over HTTP:n kaistanleveystikas voisi näyttää. \cite{Bitrate ladder} \label{taulukko4}}
+  \centering
+  \fbox{
+    \begin{tabular}{l|l}
+      Kaistanleveys & Laatu \\ \hline
+      5,0 Mb/s      & 1080p \\
+      4,0 Mb/s      & 720p  \\
+      3,2 Mb/s      & 640p  \\
+      2.0 Mb/s      & 480p  \\
+      1.0 Mb/s      & 270p  \\
+    \end{tabular}
+  }
+\end{table}
+
+\noindent HTTP-pohjaisia adaptiivisen suoratoiston teknologioita on useampia, joista kaksi tämän hetken merkittävintä ovat Dynamic Adaptive Streaming over HTTP sekä HTTP Live Streaming. Näitä kahta teknologiaa hyödyntävät useimmat suoratoisto- ja videopalvelut, kuten YouTube, Netflix, Disney+ ja Amazon Prime. Syynä HTTP-pohjaisen adaptiivisen suoratoistoteknologian suosioon on videoiden jakamisen helppoudessa. Koska sekä DASH että HLS perustuvat HTTP:hen, ne voivat kulkea minkä tahansa tavallisen palomuurin tai välityspalvelimen läpi, jotka sallivat tavanomaisen HTTP-liikenteen, joka ei ole mahdollista esimerkiksi UDP:hen perustuvassa RTP:ssä (Real-time Transport Protocol). Tämän takia DASH:n ja HLS:n hyödyntämiä viedoresursseja voidaan jakaa HTTP-pohjaisilla, laajasti tavoitettavissa olevilla sisällönjakeluverkoilla, jotka helpottavat videoresurssien saatavuutta entisestään. \\
 
 \subsection*{DASH}
 
+Dynamic Adaptive Streaming over HTTP, joka tunnetaan myös nimillä DASH ja MPEG-DASH, on ensimmäinen standardoitu HTTP-pohjainen adaptiivinen suoratoistoteknologia. DASH sai alkunsa, kun Moving Picture Experts Group (MPEG) teki CFP:n HTTP-pohjaisesta suoratoistostandardista vuonna 2009, jonka jälkeen sen kehitystyö alkoi vuonna 2010, johon osallistui useita alan yrityksiä ja organisaatioita. Alkuperäinen DASH-standardi julkaistiin huhtikuussa 2012, jonka jälkeen se on uusittu vuosina 2019 ja 2022. \\
+
+\noindent
 
 \subsection*{HLS}
 
+HTTP Live Streaming, josta käytetään usein lyhennettä HLS, on Applen kehittämä DASHia vastaava HTTP:hen perustuva adaptiivinen suoratoistoteknologia. HLS julkaistiin vuonna 2009 ja on julkaisunsa jälkeen ollut hyvin laajasti tuettuna erilaisissa mediasoittimissa, verkkoselaimissa ja mobiililaitteissa. Esimerkiksi vuonna 2018 HLS oli yhä DASH:a suositumpi alan kehittäjien keskuudessa \cite{Bitmovin}.
+
+\noindent
 
 \clearpage
 
@@ -641,11 +666,17 @@ Tarkemmin sanottuna adaptiivinen suoratoisto on siis metodi suoratoistaa videota
     Viitattu: 1.6.2022.
     Saatavissa: \url{https://bitmovin.com/mpeg-dash-hls-segment-length/}.
 
-  %\bibitem{Bitmovin}
-  %  \textit{Video Developer Report 2018.}
-  %  Verkkodokumentti.
-  %  Viitattu: 24.3.2022.
-  %  Saatavissa: \url{https://go.bitmovin.com/hubfs/Bitmovin-Video-Developer-Report-2018.pdf}.
+  \bibitem{Bitrate ladder}
+    \textit{MPEG-DASH (Dynamic Adaptive Streaming over HTTP) Explained}.
+    Verkkodokumentti.
+    Viitattu 1.9.2022.
+    Saatavissa: \url{https://corp.kaltura.com/blog/mpeg-dash/}.
+
+  \bibitem{Bitmovin}
+    \textit{Video Developer Report 2018.}
+    Verkkodokumentti.
+    Viitattu: 24.3.2022.
+    Saatavissa: \url{https://go.bitmovin.com/hubfs/Bitmovin-Video-Developer-Report-2018.pdf}.
 
 
 \end{thebibliography}
