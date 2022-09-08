@@ -460,11 +460,11 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
 
 \subsection*{MP4}
 
-MP4 eli MPEG-4 Part 14 on digitaalinen multimediasäiliöformaatti, jota käytetään lähtökohtaisesti videon ja äänen säilömiseen, mutta se voi sisältää näiden lisäksi myös erilaista dataa, kuten tekstitystä tai still-kuvia. MP4:n suosio verkkokäytössä johtuu pitkälti sen pienestä tiedostokoosta ja laajasta koodekkituesta. MP4 tukee esimerkiksi kaikkia taulukossa 3 mainittuja suosituimpia koodekkeja. MP4:ää käytetään formaattina etenkin koodekkien H.264 ja H.265 sekä myös AV1:n kanssa (tästä esimerkki kuvassa 3).
+MP4 eli MPEG-4 Part 14 on digitaalinen multimediasäiliöformaatti, jota käytetään lähtökohtaisesti videon ja äänen säilömiseen, mutta se voi sisältää näiden lisäksi myös erilaista dataa, kuten tekstitystä tai still-kuvia. MP4:n suosio verkkokäytössä johtuu pitkälti sen pienestä tiedostokoosta ja laajasta koodekkituesta. MP4 tukee esimerkiksi kaikkia taulukossa 3 mainittuja suosituimpia koodekkeja. MP4:ää käytetään formaattina etenkin koodekkien H.264 ja H.265 sekä myös AV1:n kanssa (tästä esimerkki kuvassa 3). \cite{Codecs}
 
 \subsection*{WebM}
 
-WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka suunniteltiin varta vasten korkealaatuiseksi avoimeksi standardiksi verkkokäyttöön. \cite{WebM} Ero WebM:n ja MP4:n välillä näkyy eniten ideologiaerona, sillä WebM tukee ainoastaan ilmaisia video- ja audiokoodekkeja. Tuettuihin koodekkeihin kuuluvat ensisijaisesti WebM-projektin itsensä kehittämät videokoodekit VP8 ja VP9 sekä Xiph Foundationin kehittämät audiokoodekit Vorbis ja Opus. WebM tukee myös AV1:tä, mutta AV1:n käyttö WebM-säiliössä on harvinaisempaa, kuin MP4-säiliössä (kuten kuvassa 3 näkyy).
+WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka suunniteltiin varta vasten korkealaatuiseksi avoimeksi standardiksi verkkokäyttöön. \cite{WebM} Ero WebM:n ja MP4:n välillä näkyy eniten ideologiaerona, sillä WebM tukee ainoastaan ilmaisia video- ja audiokoodekkeja. Tuettuihin koodekkeihin kuuluvat ensisijaisesti WebM-projektin itsensä kehittämät videokoodekit VP8 ja VP9 sekä Xiph Foundationin kehittämät audiokoodekit Vorbis ja Opus. WebM tukee myös AV1:tä, mutta AV1:n käyttö WebM-säiliössä on harvinaisempaa, kuin MP4-säiliössä (kuten kuvassa 3 näkyy). \cite{WebM FAQ}
 
 \begin{figure}[htb]
   \centering
@@ -490,7 +490,7 @@ Suoratoistolla, josta usein käytetään puhekielessä termiä striimaus, tarkoi
   \caption{Adaptiivisen suoratoiston toiminnan mallinnus kaistanleveyden ja tukkeutumisen avulla \label{kuva4}}
 \end{figure}
 
-\noindent Tarkemmin kuvattuna adaptiivinen suoratoisto on siis metodi suoratoistaa videota, missä toistettava video on transkoodattu useille eri bittinopeuksille. Tärkeimmät adaptiivisen suoratoiston teknologiat on toteutettu HTTP:n pohjalle. Jokainen eri bittinopeuden virroista on lisäksi segmentoitu pieniin, usean sekunnin kestoisiin segmentteihin. Yhden segmentin kesto vaihtelee käytettävän toteutuksen mukaan, mutta segmentin pituus on usein kahden ja kymmenen sekuntin väliltä. Segmentit nimetään ja jaotellaan yksilöivästi, jonka jälkeen niistä koostetaan oikean järjestyksen mukainen soittolista. Tämä kyseinen soittolista rakentuu yleensä laadun mukaan lohkoihin jaotelluista numeroiduista videosegmenteistä ja audiosegmenteistä (riippuu toteutuksesta). Yleisesti käytössä on kahta tapaa: limitetty (engl. multiplexed) ja epälimitetty (engl. non-multiplexed). Limitetyssä toteutuksessa video- ja audiosegmentit ovat limittäin sijoitettu samalle tietovirralle ja ne ladataan peräkkäin vuorotellen samasta tietovirrasta. Limittämättömässä toteutuksessa käytössä on kaksi tietovirtaa: yksi videosegmenteille ja toinen audiosegmenteille. Tiedostoa, joka kertoo päätelaitteelle tämän kyseisen soittolistan sisällön ja tiedostojen peräkkäisen järjestyksen sekä muut videon toistamiseen tarvittavat tiedot, kutsutaan manifestiksi tai manifestitiedostoksi. \\
+\noindent Tarkemmin kuvattuna adaptiivinen suoratoisto on siis metodi suoratoistaa videota, missä toistettava video on transkoodattu useille eri bittinopeuksille. Tärkeimmät adaptiivisen suoratoiston teknologiat on toteutettu HTTP:n pohjalle. Jokainen eri bittinopeuden virroista on lisäksi segmentoitu pieniin, usean sekunnin kestoisiin segmentteihin. Yhden segmentin kesto vaihtelee käytettävän toteutuksen mukaan, mutta segmentin pituus on usein kahden ja kymmenen sekuntin väliltä \cite{Segment}. Segmentit nimetään ja jaotellaan yksilöivästi, jonka jälkeen niistä koostetaan oikean järjestyksen mukainen soittolista. Tämä kyseinen soittolista rakentuu yleensä laadun mukaan lohkoihin jaotelluista numeroiduista videosegmenteistä ja audiosegmenteistä (riippuu toteutuksesta). Yleisesti käytössä on kahta tapaa: limitetty (engl. multiplexed) ja epälimitetty (engl. non-multiplexed). Limitetyssä toteutuksessa video- ja audiosegmentit ovat limittäin sijoitettu samalle tietovirralle ja ne ladataan peräkkäin vuorotellen samasta tietovirrasta. Limittämättömässä toteutuksessa käytössä on kaksi tietovirtaa: yksi videosegmenteille ja toinen audiosegmenteille. Tiedostoa, joka kertoo päätelaitteelle tämän kyseisen soittolistan sisällön ja tiedostojen peräkkäisen järjestyksen sekä muut videon toistamiseen tarvittavat tiedot, kutsutaan manifestiksi tai manifestitiedostoksi. \cite{Ottverse} \\
 
 \begin{figure}[htb]
   \centering
@@ -498,7 +498,7 @@ Suoratoistolla, josta usein käytetään puhekielessä termiä striimaus, tarkoi
   \caption{HTTP-perusteisen adaptiivisen suoratoiston toimintaperiaatteen visualisointi \label{kuva5}}
 \end{figure}
 
-\noindent Havainnollistava kaavio HTTP-perusteisen adaptiivisen suoratoistoteknologian, kuten DASH ja HLS (joista kerrotaan tarkemmin seuraavissa kappaleissa), käytöstä ja toiminnasta on esitetty kuvassa 5. Kun käyttäjä alkaa katsomaan videota verkkoselaimellaan (esimerkiksi YouTuben kautta), verkkoselain lataa ensimmäisenä videota koskevan manifestitiedoston. Tämän jälkeen verkkoselain selvittää manifestitiedostosta, mitä resursseja sen pitää ladata videon toistamiseksi. Selain tekee resurssipyyntöjä sisällönjakeluverkolle, jossa mediaresurssit sijaitsevat valmiina ladattavaksi, manifestitiedoston mukaisesti, jonka jälkeen kyseiset resurssit eli video- ja audiosegmentit ladataan sisällönjakeluverkosta käyttäjän laitteelle. Kun tarvittavat resurssit eli ensimmäinen tai ensimmäiset videosegmentit on ladattu käyttäjän laitteelle, verkkoselaimen videosoitin alkaa toistamaan videota. Jotta videon katselu ei olisi pätkivää, sisällönjakeluverkosta ladataan usein kerralla useampi segmentti varastoon puskuriksi, jos se on verkon käytettävissä olevan kaistanleveyden puitteissa mahdollista. Puskuriksi ladattavien segmenttien määrä vaihtelee toteutuksesta ja saatavilla olevasta kaistanleveydestä: mitä nopeampi yhteys ja enemmän kaistanleveyttä, sitä enemmän videosegmenttejä ehditään lataamaan puskuriin. Ladattavien videosegmenttien laatu valitaan yleensä aina edellisten segmenttien lataamisen jälkeen. Ohjelmisto tarkistaa saatavilla olevan kaistanleveyden, jonka mukaan valitaan kaistanleveystikkaasta, josta on esimerkki taulukossa 4, sopivan laatuinen videosegmentti tai -segmentit ladattavaksi. \\
+\noindent Havainnollistava kaavio HTTP-perusteisen adaptiivisen suoratoistoteknologian, kuten DASH ja HLS (joista kerrotaan tarkemmin seuraavissa kappaleissa), käytöstä ja toiminnasta on esitetty kuvassa 5. Kun käyttäjä alkaa katsomaan videota verkkoselaimellaan (esimerkiksi YouTuben kautta), verkkoselain lataa ensimmäisenä videota koskevan manifestitiedoston. Tämän jälkeen verkkoselain selvittää manifestitiedostosta, mitä resursseja sen pitää ladata videon toistamiseksi. Selain tekee resurssipyyntöjä sisällönjakeluverkolle, jossa mediaresurssit sijaitsevat valmiina ladattavaksi, manifestitiedoston mukaisesti, jonka jälkeen kyseiset resurssit eli video- ja audiosegmentit ladataan sisällönjakeluverkosta käyttäjän laitteelle. Kun tarvittavat resurssit eli ensimmäinen tai ensimmäiset videosegmentit on ladattu käyttäjän laitteelle, verkkoselaimen videosoitin alkaa toistamaan videota. Jotta videon katselu ei olisi pätkivää, sisällönjakeluverkosta ladataan usein kerralla useampi segmentti varastoon puskuriksi, jos se on verkon käytettävissä olevan kaistanleveyden puitteissa mahdollista. Puskuriksi ladattavien segmenttien määrä vaihtelee toteutuksesta ja saatavilla olevasta kaistanleveydestä: mitä nopeampi yhteys ja enemmän kaistanleveyttä, sitä enemmän videosegmenttejä ehditään lataamaan puskuriin. Ladattavien videosegmenttien laatu valitaan yleensä aina edellisten segmenttien lataamisen jälkeen. Ohjelmisto tarkistaa saatavilla olevan kaistanleveyden, jonka mukaan valitaan kaistanleveystikkaasta, josta on esimerkki taulukossa 4, sopivan laatuinen videosegmentti tai -segmentit ladattavaksi. \cite{Ottverse} \\
 
 \begin{table}[htb]
   \caption{Esimerkki siitä, miltä Dynamic Adaptive Streaming over HTTP:n kaistanleveystikas voisi näyttää. \cite{Bitrate ladder} \label{taulukko4}}
@@ -523,7 +523,7 @@ Dynamic Adaptive Streaming over HTTP, joka tunnetaan myös nimillä DASH ja MPEG
 
 \subsection*{HLS}
 
-HTTP Live Streaming, josta käytetään usein lyhennettä HLS, on Applen kehittämä DASHia vastaava HTTP:hen perustuva adaptiivinen suoratoistoteknologia. HLS julkaistiin vuonna 2009 ja on julkaisunsa jälkeen ollut hyvin laajasti tuettuna erilaisissa mediasoittimissa, verkkoselaimissa ja mobiililaitteissa. Esimerkiksi vuonna 2018 HLS oli yhä DASH:tä suositumpi alan kehittäjien keskuudessa \cite{Bitmovin1}. Teknologian osalta HLS voi selaimesta riippuen toimia joko natiivisti tai MSE:n avulla, kuten DASH. HLS on tuettu kaikissa moderneissa selaimissa.
+HTTP Live Streaming, josta käytetään usein lyhennettä HLS, on Applen kehittämä DASHia vastaava HTTP:hen perustuva adaptiivinen suoratoistoteknologia. HLS julkaistiin vuonna 2009 ja on julkaisunsa jälkeen ollut hyvin laajasti tuettuna erilaisissa mediasoittimissa, verkkoselaimissa ja mobiililaitteissa. Esimerkiksi vuonna 2018 HLS oli yhä DASH:tä suositumpi alan kehittäjien keskuudessa \cite{Bitmovin1}. Teknologian osalta HLS voi selaimesta riippuen toimia joko natiivisti tai MSE:n avulla, kuten DASH. HLS on tuettu kaikissa moderneissa selaimissa. \cite{Spiceworks}
 
 \clearpage
 
@@ -655,11 +655,23 @@ Kaiken kaikkiaan modernit työssä tarkastellut verkkoselaimet ovat hyvin samanl
     Viitattu: 30.3.2022.
     Saatavissa: \url{https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs}.
 
+  \bibitem{Codecs}
+    \textit{Codecs.}
+    Verkkodokumentti.
+    Viitattu 8.9.2022.
+    Saatavissa: \url{http://mp4ra.org/#/codecs}.
+
   \bibitem{WebM}
     \textit{About WebM.}
     Verkkodokumentti.
     Viitattu: 30.3.2022.
     Saatavissa: \url{https://www.webmproject.org/about/}.
+
+  \bibitem{WebM FAQ}
+    \textit{Frequently Asked Questions - WebM}
+    Verkkodokumentti.
+    Viitattu: 8.9.2022.
+    Saatavissa: \url{https://www.webmproject.org/about/faq/}.
 
   \bibitem{Britannica}
     \textit{streaming | Definition, Meaning and Facts | Brotannica.}
@@ -673,6 +685,12 @@ Kaiken kaikkiaan modernit työssä tarkastellut verkkoselaimet ovat hyvin samanl
     Viitattu: 17.5.2022.
     Saatavissa: \url{https://stadia.google.com/}.
 
+  \bibitem{Ottverse}
+    \textit{What is MPEG-DASH Video Streaming Protocol? How Does MPEG-DASH Work?.}
+    Verkkodokumentti.
+    Viitattu: 8.9.2022.
+    Saatavissa: \url{https://ottverse.com/mpeg-dash-video-streaming-the-complete-guide/}
+
   \bibitem{Segment}
     \textit{Optimal Adaptive Streaming Formats MPEG-DASH & HLS Segment Length.}
     Verkkodokumentti.
@@ -680,16 +698,22 @@ Kaiken kaikkiaan modernit työssä tarkastellut verkkoselaimet ovat hyvin samanl
     Saatavissa: \url{https://bitmovin.com/mpeg-dash-hls-segment-length/}.
 
   \bibitem{Bitrate ladder}
-    \textit{MPEG-DASH (Dynamic Adaptive Streaming over HTTP) Explained}.
+    \textit{MPEG-DASH (Dynamic Adaptive Streaming over HTTP) Explained.}
     Verkkodokumentti.
     Viitattu 1.9.2022.
     Saatavissa: \url{https://corp.kaltura.com/blog/mpeg-dash/}.
 
   \bibitem{Lambdatest}
-    \textit{Browser Compatibility Of Dynamic Adaptive Streaming Over HTTP (MPEG-DASH) On Safari 7.1}
+    \textit{Browser Compatibility Of Dynamic Adaptive Streaming Over HTTP (MPEG-DASH) On Safari 7.1.}
     Verkkodokumentti.
     Viitattu 7.9.2022.
-    Saatavissa: url{https://www.lambdatest.com/web-technologies/mpeg-dash-support-on-safari-7.1}.
+    Saatavissa: \url{https://www.lambdatest.com/web-technologies/mpeg-dash-support-on-safari-7.1}.
+
+  \bibitem{Spiceworks}
+    \textit{MPEG-DASH vs HLS: Which One Should You Use?.}
+    Verkkodokumentti.
+    Viitattu: 8.9.2022.
+    Saatavissa: \url{https://www.spiceworks.com/tech/programming/guest-article/mpeg-dash-vs-hls-which-one-should-you-use/}
 
   \bibitem{Bitmovin1}
     \textit{Video Developer Report 2018.}
@@ -698,13 +722,13 @@ Kaiken kaikkiaan modernit työssä tarkastellut verkkoselaimet ovat hyvin samanl
     Saatavissa: \url{https://go.bitmovin.com/hubfs/Bitmovin-Video-Developer-Report-2018.pdf}.
 
   \bibitem{Bitmovin2}
-    \textit{Why YouTube & Netflix use MPEG-DASH in HTML5}
+    \textit{Why YouTube & Netflix use MPEG-DASH in HTML5.}
     Verkkodokumentti.
     Viitattu: 7.9.2022.
     Saatavissa: \url{https://bitmovin.com/mpeg-dash-youtube-netflix-html5/}.
 
   \bibitem{Netflix}
-    \textit{Netflix Now Streaming AV1 on Android}
+    \textit{Netflix Now Streaming AV1 on Android.}
     Verkkodokumentti.
     Viitattu: 7.9.2022.
     Saatavissa: \url{https://netflixtechblog.com/netflix-now-streaming-av1-on-android-d5264a515202}
