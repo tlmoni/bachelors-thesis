@@ -212,7 +212,7 @@
 \place{Espoo}
 
 % Kandidaatintyön päivämäärä on sen esityspäivämäärä
-\date{XX.XX.2022}
+\date{8.9.2022}
 
 % Kandidaattiseminaarin vastuuopettaja
 \supervisor{Yliopistonlehtori Markus Turunen}
@@ -240,7 +240,7 @@
 % Tiivistelmän tekstiosa
 % Tämä teksti sisältyy pdf-tiedoston metadataa ja tulee myös tiivistelmälomakkeeseen.
 \thesisabstract{
-  Tiivistelmä
+  Tässä työssä on tutkittu kirjallisuuskatsauksena viittä suosituinta verkkoselainta (Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge ja Opera) adaptiivisen videokuvan näkökulmasta. Kyseiset selaimet käyttävät vain kolmea eri selainmoottoria ja ovat ominaisuuksiltaan hyvin samankaltaisia. \\\\ Verkkokäytössä olevat videoformaatit rajoittuvat olennaisesti kahteen: MP4 ja WebM. Molemmat formaatit sopivat erinomaisesti verkkokäyttöön hyvän pakkaussuhteen takia. Eroja löytyy lähinnä koodekkituen osalta. \\\\ Lähes kaikki internetin adaptiivinen videokuva toimitetaan HTTP:n avulla joko DASH:llä tai HLS:llä. Nuo kaksi siirtoprotokollaa ovat lähes identtisiä toimintaperiaatteeltaan. Isoin ero on se, että DASH on standardoitu ja että HLS on laajemmin tuettu. \\\\ Työn tärkeimmät tulokset on kiteytettävissä siihen, että selainten välillä on vain vähän eroja. Isoin ero on siirtoprotokollatuessa sekä koodekkituessa, sillä Safari ei tue DASH:ä siirtoprotokollana, eikä AV1:tä koodekkina, mutta tukee ainoana H.265/HEVC-koodekkia.\\
 }
 
 % Tekijänoikeusteksti. Tekijänoikeus on tekijällä riippumatta siitä onko copyright -merkintä näkyvissä vai ei.
@@ -442,7 +442,7 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
 
 \noindent Jotta täysteräväpiirtovideon siirtäminen verkkoyhteyden avulla olisi realistista, tarvitsee videota pakata pienemmäksi. Videokoodekit ovat tässä avainasemassa. Koodekki on tässä yhteydessä ohjelmisto, jolla digitaalinen video voidaan pakata tietyn videokoodausformaatin mukaiseksi sekä purkaa kyseessä olevasta formaatista toistettavaksi signaaliksi \cite{Codec}. \\
 
-\noindent Koodekista ja yhteensopivasta videokoodausformaatista käytetään usein samaa nimeä, jonka takia puhekielessä formaatin sijasta saatetaan helposti puhua koodekista. Tämän hetken yleisimpiin koodekkeihin sekä formaatteihin kuuluu muun muassa AV1, H.264/AVC, H.265/HEVC ja VP9 \cite{Codec guide}. Taulukosta 3 nähdään kootusti edellä mainittujen koodekkien tukemat säiliöformaatit. Taulukosta on havaittavissa hyvin nopeasti syy MP4-säiliön suosioon, sillä siihen voi sisällyttää kaikkia edellä mainittujen formaattien mukaista videota.
+\noindent Koodekista ja yhteensopivasta videokoodausformaatista käytetään usein samaa nimeä, jonka takia puhekielessä formaatin sijasta saatetaan helposti puhua koodekista. Tämän hetken yleisimpiin koodekkeihin sekä formaatteihin kuuluu muun muassa AV1, H.264/AVC, H.265/HEVC ja VP9 \cite{Codec guide}. Taulukosta 3 nähdään kootusti edellä mainittujen koodekkien tukemat säiliöformaatit. Taulukosta on havaittavissa hyvin nopeasti syy MP4-säiliön suosioon, sillä siihen voi sisällyttää kaikkia edellä mainittujen formaattien mukaista videota. Koodekeista H.264/AVC on vanhin ja heikoimmalla pakkaussuhteella varustettu, mutta myös yleisin ja tuetuin johtuen sen iästä. Uudemmat koodekit (etenkin AV1 ja H.265/AVC) taas omaavat selkeästi paremman pakkaussuhteen, mutta ovat vaihtelevammin tuettuna. Esimerkiksi YouTubessa videoita on tarjolla sekalaisilla koodekeilla koodattuna, joista etenkin uudemmat videot saattavat olla koodattu esimerkiksi AV1:llä tai H.265/HEVC:llä.
 
 \begin{table}[htb]
   \caption{Suosittuja videokoodekkeja ja niiden säiliöitä. \cite{Codec guide} \label{taulukko3}}
@@ -460,17 +460,17 @@ Videokuvalla eli videolla tarkoitetaan yleensä teknologiaa, jolla elektronisist
 
 \subsection*{MP4}
 
-MP4 eli MPEG-4 Part 14 on digitaalinen multimediasäiliöformaatti, jota käytetään lähtökohtaisesti videon ja äänen säilömiseen, mutta se voi sisältää näiden lisäksi myös erilaista dataa, kuten tekstitystä tai still-kuvia. MP4:n suosio verkkokäytössä johtuu pitkälti sen pienestä tiedostokoosta ja laajasta koodekkituesta. MP4 tukee esimerkiksi kaikkia taulukossa 3 mainittuja suosituimpia koodekkeja. MP4:ää käytetään formaattina etenkin koodekkien H.264 ja H.265 sekä myös AV1:n kanssa. \\
+MP4 eli MPEG-4 Part 14 on digitaalinen multimediasäiliöformaatti, jota käytetään lähtökohtaisesti videon ja äänen säilömiseen, mutta se voi sisältää näiden lisäksi myös erilaista dataa, kuten tekstitystä tai still-kuvia. MP4:n suosio verkkokäytössä johtuu pitkälti sen pienestä tiedostokoosta ja laajasta koodekkituesta. MP4 tukee esimerkiksi kaikkia taulukossa 3 mainittuja suosituimpia koodekkeja. MP4:ää käytetään formaattina etenkin koodekkien H.264 ja H.265 sekä myös AV1:n kanssa (tästä esimerkki kuvassa 3).
+
+\subsection*{WebM}
+
+WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka suunniteltiin varta vasten korkealaatuiseksi avoimeksi standardiksi verkkokäyttöön. \cite{WebM} Ero WebM:n ja MP4:n välillä näkyy eniten ideologiaerona, sillä WebM tukee ainoastaan ilmaisia video- ja audiokoodekkeja. Tuettuihin koodekkeihin kuuluvat ensisijaisesti WebM-projektin itsensä kehittämät videokoodekit VP8 ja VP9 sekä Xiph Foundationin kehittämät audiokoodekit Vorbis ja Opus. WebM tukee myös AV1:tä, mutta AV1:n käyttö WebM-säiliössä on harvinaisempaa, kuin MP4-säiliössä (kuten kuvassa 3 näkyy).
 
 \begin{figure}[htb]
   \centering
   \includegraphics[height=4cm]{./img/youtube.png}
-  \caption{Esimerkki YouTuben MP4-muotoisen videon teknisistä tiedoista. Videon koodekki on AV1 ja audion Opus. \label{kuva3}}
+  \caption{Esimerkki YouTuben MP4-muotoisen videon teknisistä tiedoista. Videon koodekki on AV1 ja audion Opus. Videon formaatti selviää tutkimalla kehittäjä-näkymän verkko-osuutta. \label{kuva3}}
 \end{figure}
-
-\subsection*{WebM}
-
-WebM on avoin ja rojaltivapaa audiovisuaalinen multimediasäiliöformaatti, joka suunniteltiin varta vasten korkealaatuiseksi avoimeksi standardiksi verkkokäyttöön. \cite{WebM} Ero WebM:n ja MP4:n välillä näkyy eniten ideologiaerona, sillä WebM tukee ainoastaan ilmaisia video- ja audiokoodekkeja. Tuettuihin koodekkeihin kuuluvat ensisijaisesti WebM-projektin itsensä kehittämät videokoodekit VP8 ja VP9 sekä Xiph Foundationin kehittämät audiokoodekit Vorbis ja Opus. WebM tukee myös AV1:tä, mutta AV1:n käyttö WebM-säiliössä on harvinaisempaa, kuin MP4-säiliössä. \\
 
 \clearpage
 
@@ -515,19 +515,15 @@ Suoratoistolla, josta usein käytetään puhekielessä termiä striimaus, tarkoi
   }
 \end{table}
 
-\noindent HTTP-pohjaisia adaptiivisen suoratoiston teknologioita on useampia, joista kaksi tämän hetken merkittävintä ovat Dynamic Adaptive Streaming over HTTP sekä HTTP Live Streaming. Näitä kahta teknologiaa hyödyntävät useimmat suoratoisto- ja videopalvelut, kuten YouTube, Netflix, Disney+ ja Amazon Prime. Syynä HTTP-pohjaisen adaptiivisen suoratoistoteknologian suosioon on videoiden jakamisen helppoudessa. Koska sekä DASH että HLS perustuvat HTTP:hen, ne voivat kulkea minkä tahansa tavallisen palomuurin tai välityspalvelimen läpi, jotka sallivat tavanomaisen HTTP-liikenteen, joka ei ole mahdollista esimerkiksi UDP:hen perustuvassa RTP:ssä (Real-time Transport Protocol). Tämän takia DASH:n ja HLS:n hyödyntämiä viedoresursseja voidaan jakaa HTTP-pohjaisilla, laajasti tavoitettavissa olevilla sisällönjakeluverkoilla, jotka helpottavat videoresurssien saatavuutta entisestään. \\
+\noindent HTTP-pohjaisia adaptiivisen suoratoiston teknologioita on useampia, joista kaksi tämän hetken merkittävintä ovat Dynamic Adaptive Streaming over HTTP sekä HTTP Live Streaming. Näitä kahta teknologiaa hyödyntävät useimmat suoratoisto- ja videopalvelut, kuten YouTube, Netflix, Disney+ ja Amazon Prime. Syynä HTTP-pohjaisen adaptiivisen suoratoistoteknologian suosioon on videoiden jakamisen helppoudessa. Koska sekä DASH että HLS perustuvat HTTP:hen, ne voivat kulkea minkä tahansa tavallisen palomuurin tai välityspalvelimen läpi, jotka sallivat tavanomaisen HTTP-liikenteen, joka ei ole mahdollista esimerkiksi UDP:hen perustuvassa RTP:ssä (Real-time Transport Protocol). Tämän takia DASH:in ja HLS:n hyödyntämiä viedoresursseja voidaan jakaa HTTP-pohjaisilla, laajasti tavoitettavissa olevilla sisällönjakeluverkoilla, jotka helpottavat videoresurssien saatavuutta entisestään. \\
 
 \subsection*{DASH}
 
-Dynamic Adaptive Streaming over HTTP, joka tunnetaan myös nimillä DASH ja MPEG-DASH, on ensimmäinen standardoitu HTTP-pohjainen adaptiivinen suoratoistoteknologia. DASH sai alkunsa, kun Moving Picture Experts Group (MPEG) teki CFP:n HTTP-pohjaisesta suoratoistostandardista vuonna 2009, jonka jälkeen sen kehitystyö alkoi vuonna 2010, johon osallistui useita alan yrityksiä ja organisaatioita. Alkuperäinen DASH-standardi julkaistiin huhtikuussa 2012, jonka jälkeen se on uusittu vuosina 2019 ja 2022. \\
-
-\noindent
+Dynamic Adaptive Streaming over HTTP, joka tunnetaan myös nimillä DASH ja MPEG-DASH, on ensimmäinen standardoitu HTTP-pohjainen adaptiivinen suoratoistoteknologia. DASH sai alkunsa, kun Moving Picture Experts Group (MPEG) teki CFP:n HTTP-pohjaisesta suoratoistostandardista vuonna 2009, jonka jälkeen sen kehitystyö alkoi vuonna 2010, johon osallistui useita alan yrityksiä ja organisaatioita. Alkuperäinen DASH-standardi julkaistiin huhtikuussa 2012, jonka jälkeen se on uusittu vuosina 2019 ja 2022. Teknologian osalta DASH toimii Media Source Extensioneiden (MSE) avulla, jotka mahdollistavat moderneissa selaimissa JavaScriptin lähettää tavuvirtoja selaimen mediakoodekkeihin ja sitä kautta esittää videota suoraan HTML5-teknologioilla. DASH on laajalti tuettu pitkälti kaikissa muissa selaimissa, paitsi Safarissa \cite{Lambdatest}.
 
 \subsection*{HLS}
 
-HTTP Live Streaming, josta käytetään usein lyhennettä HLS, on Applen kehittämä DASHia vastaava HTTP:hen perustuva adaptiivinen suoratoistoteknologia. HLS julkaistiin vuonna 2009 ja on julkaisunsa jälkeen ollut hyvin laajasti tuettuna erilaisissa mediasoittimissa, verkkoselaimissa ja mobiililaitteissa. Esimerkiksi vuonna 2018 HLS oli yhä DASH:a suositumpi alan kehittäjien keskuudessa \cite{Bitmovin}.
-
-\noindent
+HTTP Live Streaming, josta käytetään usein lyhennettä HLS, on Applen kehittämä DASHia vastaava HTTP:hen perustuva adaptiivinen suoratoistoteknologia. HLS julkaistiin vuonna 2009 ja on julkaisunsa jälkeen ollut hyvin laajasti tuettuna erilaisissa mediasoittimissa, verkkoselaimissa ja mobiililaitteissa. Esimerkiksi vuonna 2018 HLS oli yhä DASH:tä suositumpi alan kehittäjien keskuudessa \cite{Bitmovin1}. Teknologian osalta HLS voi selaimesta riippuen toimia joko natiivisti tai MSE:n avulla, kuten DASH. HLS on tuettu kaikissa moderneissa selaimissa.
 
 \clearpage
 
@@ -535,12 +531,29 @@ HTTP Live Streaming, josta käytetään usein lyhennettä HLS, on Applen kehitt�
 % 5 Vertailu
 \section{Vertailu}
 
+Pintapuolisesti tarkasteltuna adaptiivisen videokuvan katselu ei eroa juuri mitenkään eri selaimilla. Isoimmat erot käyttäjälle näkyvät selainten erilaisten käyttöliittymien ja muiden ominaisuuksien muodossa. Kuitenkin eroja esimerkiksi videon latausnopeudessa sekä laadussa voi ilmetä, johtuen käytetystä videon eri koodekista tai formaatista, joiden tuki vaihtelee selaimittain. Tästä selkeimpänä esimerkkinä lienee AV1, jota Safari ei tue lainkaan tällä hetkellä, kun taas muut selaimet tukevat AV1-koodattuja videoita. AV1:n erinomainen pakkaussuhde sekä korkea laatu tiedostokokoon nähden voivat näkyä erona nopeudessa ja laadussa käyttäjille. \\
+
+\noindent Suurimmat erot videoiden adaptiivisessa suoratoistossa verkkoselaimilla piilee ulkokuoren alla käytettävissä teknologioissa. Eri videopalvelut suosivat joko DASH:ä tai HLS:ää ja täten samaa selainta käyttäessä eri videopalveluiden videot voivat olla toimitettu eri menetelmällä. Vaikka videopalvelulla olisi suuri preferenssi DASH:ä kohtaan, on videopalvelun kuitenkin pakko tarjota videoita myös HLS:llä, sillä muuten kaikki Safari-käyttäjät jäisivät ilman videoita. Ottaen Safari-käyttäjien suuren määrän huomioon, kyseessä on tarpeeksi iso osuus videoiden katsojakunnasta, ettei videopalvelut voi jättää heitä huomiotta. Toisin sanoen Apple pakottaa videopalvelut tarjoamaan videonsa myös HLS:n avulla, sillä Safariin ei ole lisätty DASH-tukea. Esimerkiksi YouTube on ilmoittanut käyttävänsä DASH:ä aina kun mahdollista \cite{Bitmovin2}. Myös Netflix on ilmoittanut tähtäävänsä tarjoamaan videosisältönsä lähtökohtaisesti DASH:llä ja mieluiten AV1-koodattuna \cite{Netflix}. Kuitenkin molemmat näistä videopalveluista tarjoaa sisältöä myös HLS:llä, aivan kuten muutkin videopalvelut. \\
+
+\noindent Eroja selainten välillä on myös käytetyissä koodekeissa. Siinä missä Safari ei tue AV1:tä, eivät Chrome, Firefox, Opera ja Edge tue H.265/HEVC:tä, toisin kuin Safari. Safari on siis ainoa, joka tukee lisenssimaksullista HEVC:tä korkeampana laatuvaihtoehtona H.264/AVC:n sijasta, kun taas muilla selaimilla käytössä on koodekit H.264/AVC, VP9 ja AV1, joista valtaosa on lisenssimaksuttomia. Muilla selaimilla on siis huomattavasti enemmän vaihtoehtoja koodekkien suhteen ja preferoivat usein monien vidoepalveluiden lailla ilmaisia vaihtoehtoja. \\
+
+\noindent Havaittavissa on siis kahta koulukuntaa: Apple ja muut alan toimijat. Apple on käytännössä pakottanut teknologiavalintoja siirtoprotokollan ja koodekkien muodossa ja täten pakottanut videopalvelut tarjoamaan sisältöä sen sanelemilla ehdoilla, sillä tarpeeksi iso osa internetin videopalveluiden käyttäjistä käyttää Safaria selaimenaan.
 
 \clearpage
+
 
 % 6 Yhteenveto
 \section{Yhteenveto}
 
+Kaiken kaikkiaan modernit työssä tarkastellut verkkoselaimet ovat hyvin samanlaisia, ja niissä on monipuolisesti erilaisia ominaisuuksia. Selainmoottoreita on käytössä vain 3 (WebKit, Gecko ja Blink), joista Blink on selkeästi käytetyin. \\
+
+\noindent Nykyään videoformaatteja on olemassa hyvin monenlaisia, mutta niistä erityisesti MP4 ja WebM ovat laajassa käytössä internetin suoratoistovideopalveluissa. Sekä MP4 että WebM omaavat todella hyvän pakkaussuhteen, eli niihin voidaan säilöä laadukasta videosisältöä pitämällä tiedostokoko kuitenkin minimissä. Molemmpiin formaatteihin voidaan säilöä useammalla eri koodekilla koodattua video- ja audiodataa. MP4 on näistä kahdesta monipuolisempi formaatti, sillä WebM lähtökohtaisesti tukee ainoastaan ilmaisia video- ja audiokoodekkeja. \\
+
+\noindent Tämän hetken käytetyimmät videokoodekit ovat H.264/AVC, VP9, H.265/HEVC ja AV1. Edellä mainitusta neljästä koodekista AVC ja HEVC ovat lisenssimaksullisia, kun taas VP9 ja AV1 ovat ilmaisia. Edellä mainituista H.264/AVC ja VP9 on tuettu kaikissa selaimissa. H.265/HEVC on tuettu vain Safarissa, kun taas muut selaimet tukevat sen sijasta AV1:tä paremman laadun koodekkina. \\
+
+\noindent Lähes kaikki adaptiivisen suoratoiston videot toimitetaan HTTP:hen perustuvilla teknologioilla. Näistä kaksi tärkeintä toteutusta ovat DASH ja HLS, joilla lähes kaikki adaptiivinen suoratoisto tuntuu olevan toteutettu internetissä. DASH ja HLS ovat toimintaperiaatteeltaan lähes identtiset, sillä niiden suurimmat erot löytyvät lähinnä manifestitiedostosta. Molemmissa video on jaettu pieniin, muutaman sekunnin mittaisiin segmentteihin ja kaikki segmentit on saatavissa myös eri laatuisina. Ladattava laatu valitaan aina käytettävissä olevan kaistanleveyden mukaan, jolloin toisto on katkotonta. \\
+
+\noindent Tutkimuksessa havaitaan, että kaikki käsitellyt selaimet ovat varsin toimivia käyttötarkoitukseensa ja täten selainvalinnalla ei ole paljoa merkitystä yleisesti ottaen adaptiivisen suoratoistovideon katselussa. Tutkimus kuitenkin antaa osviittaa, että paras selainvalinta olisi todennäköisesti Google Chrome, sillä se hyödyntää ja tukee lähtökohtaisesti uusimpia teknologioita ja omaa laajimman käyttäjäkunnan. Tutkimus myös osoittaa, että käsitellyistä selaimista Safari olisi huonoin, sillä se tukee vähemmän protokollia ja teknologioita, kuin esimerkiksi kilpailijansa.
 
 \clearpage
 
@@ -672,12 +685,29 @@ HTTP Live Streaming, josta käytetään usein lyhennettä HLS, on Applen kehitt�
     Viitattu 1.9.2022.
     Saatavissa: \url{https://corp.kaltura.com/blog/mpeg-dash/}.
 
-  \bibitem{Bitmovin}
+  \bibitem{Lambdatest}
+    \textit{Browser Compatibility Of Dynamic Adaptive Streaming Over HTTP (MPEG-DASH) On Safari 7.1}
+    Verkkodokumentti.
+    Viitattu 7.9.2022.
+    Saatavissa: url{https://www.lambdatest.com/web-technologies/mpeg-dash-support-on-safari-7.1}.
+
+  \bibitem{Bitmovin1}
     \textit{Video Developer Report 2018.}
     Verkkodokumentti.
-    Viitattu: 24.3.2022.
+    Viitattu: 6.9.2022.
     Saatavissa: \url{https://go.bitmovin.com/hubfs/Bitmovin-Video-Developer-Report-2018.pdf}.
 
+  \bibitem{Bitmovin2}
+    \textit{Why YouTube & Netflix use MPEG-DASH in HTML5}
+    Verkkodokumentti.
+    Viitattu: 7.9.2022.
+    Saatavissa: \url{https://bitmovin.com/mpeg-dash-youtube-netflix-html5/}.
+
+  \bibitem{Netflix}
+    \textit{Netflix Now Streaming AV1 on Android}
+    Verkkodokumentti.
+    Viitattu: 7.9.2022.
+    Saatavissa: \url{https://netflixtechblog.com/netflix-now-streaming-av1-on-android-d5264a515202}
 
 \end{thebibliography}
 
